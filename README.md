@@ -12,7 +12,7 @@ curl -fsSL https://github.com/Ami0307/tethera-releases/releases/latest/download/
 
 The installer puts `tethera` in `~/.local/bin` (no sudo), checks the download against its `.sha256`, starts the connector at login (a LaunchAgent on macOS, a `systemd --user` service on Linux) and shows a one-time QR code. Scan it in the Tethera app and confirm that the 6 digits match on both sides.
 
-Builds: macOS universal (Apple silicon and Intel), Linux x86_64 and aarch64 (static, any distribution). On Linux without `systemd --user` (some containers, WSL without systemd) the installer says so and you start the connector yourself with `tethera serve`; `TETHERA_NO_AGENT=1` skips the login service entirely:
+Builds: macOS universal (Apple silicon and Intel), Linux x86_64 and aarch64 (static, any distribution). If the login service can't be set up (Linux without `systemd --user`, such as some containers or WSL; a Mac reached over SSH with nobody logged in to the desktop), the installer says why and how to start the connector yourself with `tethera serve`, and still finishes. `TETHERA_NO_AGENT=1` skips the login service entirely:
 
 ```sh
 curl -fsSL https://github.com/Ami0307/tethera-releases/releases/latest/download/install.sh | TETHERA_NO_AGENT=1 sh

@@ -58,13 +58,22 @@ case ":$PATH:" in
 esac
 
 if [ "${TETHERA_NO_AGENT:-}" != "1" ]; then
-    "$BIN_DIR/tethera" install-agent
+    # The binary is in place either way: a failed autostart is a warning.
+    if ! "$BIN_DIR/tethera" install-agent; then
+        say ""
+        say "Warning: tethera is installed, but starting it at login didn't work (see above)."
+        say "Start it yourself with: $BIN_DIR/tethera serve"
+        say "or try again later with: $BIN_DIR/tethera install-agent"
+    fi
 fi
 
 if [ "${TETHERA_NO_PAIR:-}" != "1" ]; then
     say ""
-    # Piped installs have no terminal on stdin; read the y/n from the tty.
-    if [ -r /dev/tty ]; then
+    if ! "$BIN_DIR/tethera" status >/dev/null 2>&1; then
+        # Pairing talks to the running connector.
+        say "Once the connector is running, pair your phone with: tethera pair"
+    elif [ -r /dev/tty ]; then
+        # Piped installs have no terminal on stdin; read the y/n from the tty.
         "$BIN_DIR/tethera" pair < /dev/tty
     else
         say "Pair your phone with: tethera pair"
