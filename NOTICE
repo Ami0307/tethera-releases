@@ -1,0 +1,45 @@
+Tethera
+
+Portions of the transcript-locating and send logic are adapted from Shepherdr,
+Copyright (c) 2026 Elias Stravik, MIT License:
+
+MIT License
+
+Copyright (c) 2026 Elias Stravik
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+----------------------------------------------------------------------------
+
+Third-party components (each under its own license, unmodified):
+
+- Swift packages (App, HerdrSSH): Citadel, SwiftNIO, swift-nio-ssh,
+  swift-crypto, swift-asn1, swift-atomics, swift-collections, swift-log,
+  swift-system (Apache-2.0); BigInt (MIT).
+- Rust crates linked into the app (TetheraLinkFFI) and the `tethera`
+  connector: iroh and its dependencies, mostly MIT OR Apache-2.0; ICU4X
+  crates (Unicode-3.0); webpki-roots (CDLA-Permissive-2.0); uniffi
+  runtime and attohttpc (MPL-2.0, used unmodified; source at
+  https://github.com/mozilla/uniffi-rs and
+  https://github.com/sbstp/attohttpc). The full list with versions is
+  link/Cargo.lock (`cargo metadata` prints each crate's license).
+
+An in-app acknowledgements screen with the full license texts is still to
+be added before release.
+

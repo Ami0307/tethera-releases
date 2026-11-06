@@ -1,0 +1,35 @@
+# Tethera connector
+
+The computer side of [Tethera](https://herdr.dev), the iPhone client for Herdr: it lets your phone reach the coding agents (Claude Code, Codex) that Herdr runs on this computer.
+
+This repository only hosts the installer and the release binaries.
+
+## Install (macOS)
+
+```sh
+curl -fsSL https://github.com/Ami0307/tethera-releases/releases/latest/download/install.sh | sh
+```
+
+The installer puts `tethera` in `~/.local/bin` (no sudo), checks the download against its `.sha256`, starts the connector at login (a LaunchAgent) and shows a one-time QR code. Scan it in the Tethera app and confirm that the 6 digits match on both sides.
+
+Linux builds are not published yet.
+
+## Use
+
+| Command | What it does |
+|---|---|
+| `tethera pair` | Pair another phone (one-time QR code, valid 5 minutes) |
+| `tethera devices` | List paired phones |
+| `tethera revoke <name>` | Remove a phone; its connections end at once |
+| `tethera status` | Is it running, relay, direct addresses, phones |
+| `tethera config set relay n0\|off\|URL` | Choose the relay (default: n0 public relays) |
+| `tethera config set port N` | UDP port for direct connections (default 47011) |
+| `tethera uninstall` | Remove the agent, the binary and all connector state |
+
+## Security
+
+- Only paired phones get in; the connector only forwards to this computer's `hc connect` and opens no listening port to the internet.
+- Traffic is end-to-end encrypted (QUIC over iroh); a relay only sees ciphertext.
+- Each phone has its own key and can be removed on its own, here or from the app.
+
+The binaries are not signed or notarized yet. A file downloaded with `curl` has no quarantine flag, so macOS runs it without the Gatekeeper prompt.
