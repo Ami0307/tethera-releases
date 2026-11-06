@@ -4,15 +4,19 @@ The computer side of [Tethera](https://herdr.dev), the iPhone client for Herdr: 
 
 This repository only hosts the installer and the release binaries.
 
-## Install (macOS)
+## Install (macOS and Linux)
 
 ```sh
 curl -fsSL https://github.com/Ami0307/tethera-releases/releases/latest/download/install.sh | sh
 ```
 
-The installer puts `tethera` in `~/.local/bin` (no sudo), checks the download against its `.sha256`, starts the connector at login (a LaunchAgent) and shows a one-time QR code. Scan it in the Tethera app and confirm that the 6 digits match on both sides.
+The installer puts `tethera` in `~/.local/bin` (no sudo), checks the download against its `.sha256`, starts the connector at login (a LaunchAgent on macOS, a `systemd --user` service on Linux) and shows a one-time QR code. Scan it in the Tethera app and confirm that the 6 digits match on both sides.
 
-Linux builds are not published yet.
+Builds: macOS universal (Apple silicon and Intel), Linux x86_64 and aarch64 (static, any distribution). On Linux without `systemd --user` (some containers, WSL without systemd) the installer says so and you start the connector yourself with `tethera serve`; `TETHERA_NO_AGENT=1` skips the login service entirely:
+
+```sh
+curl -fsSL https://github.com/Ami0307/tethera-releases/releases/latest/download/install.sh | TETHERA_NO_AGENT=1 sh
+```
 
 ## Use
 
@@ -32,4 +36,4 @@ Linux builds are not published yet.
 - Traffic is end-to-end encrypted (QUIC over iroh); a relay only sees ciphertext.
 - Each phone has its own key and can be removed on its own, here or from the app.
 
-The binaries are not signed or notarized yet. A file downloaded with `curl` has no quarantine flag, so macOS runs it without the Gatekeeper prompt.
+The macOS binary is not signed or notarized yet. A file downloaded with `curl` has no quarantine flag, so macOS runs it without the Gatekeeper prompt.
