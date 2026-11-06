@@ -40,7 +40,7 @@ mkdir -p "$BIN_DIR"
 tmp=$(mktemp "${TMPDIR:-/tmp}/tethera.XXXXXX")
 trap 'rm -f "$tmp" "$tmp.sha256"' EXIT INT TERM
 
-say "Downloading $asset…"
+say "Downloading ${asset}…"
 curl -fsSL "$BASE_URL/$asset" -o "$tmp" || die "download failed: $BASE_URL/$asset"
 # Every release has the checksum next to the binary: no checksum, no install.
 curl -fsSL "$BASE_URL/$asset.sha256" -o "$tmp.sha256" || die "no checksum at $BASE_URL/$asset.sha256"
