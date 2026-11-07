@@ -37,3 +37,13 @@ curl -fsSL https://github.com/Ami0307/tethera-releases/releases/latest/download/
 - Each phone has its own key and can be removed on its own, here or from the app.
 
 The macOS binary is not signed or notarized yet. A file downloaded with `curl` has no quarantine flag, so macOS runs it without the Gatekeeper prompt.
+
+## iPhone app: SideStore source
+
+The Tethera iPhone app can be installed and updated from SideStore (or AltStore). Add this source once:
+
+```
+https://raw.githubusercontent.com/Ami0307/tethera-releases/main/sidestore/source.json
+```
+
+New versions then show up in SideStore and update in place. The IPAs are attached to the `app-v*` releases here (the newest 5 are kept); `sidestore/` only holds `source.json` and the app icon.
