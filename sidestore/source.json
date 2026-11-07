@@ -23,6 +23,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.8",
+          "buildVersion": "299",
+          "date": "2026-11-07T13:08:26Z",
+          "localizedDescription": "## 新功能\n- 对话页 markdown：表格真正渲染（表头、对齐、宽了横向滑），一条回复能从第一段连续拖选到最后一段；每条回复有复制按钮，代码块复制原文，表格复制成 tab 分隔文本（#68）\n- 全局搜索：顶栏放大镜，一处搜会话标题、空间、目录、电脑名、agent 类型，边打边出，按匹配度和「谁需要我」排序，可按状态筛选，记住最近访问（#71）",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.8/Tethera-0.8.ipa",
+          "size": 13932861,
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.7",
           "buildVersion": "288",
           "date": "2026-11-07T09:03:58Z",
@@ -52,11 +61,11 @@
           "NSPhotoLibraryAddUsageDescription": "把对话里的图片存到你的相册。"
         }
       },
-      "version": "0.7",
-      "versionDate": "2026-11-07T09:03:58Z",
-      "versionDescription": "## 新功能\n- 切一下后台不再断开：短暂离开连接照常保持，回来先确认连接，断了才重连，并且不丢当前页面；连不上时区分「电脑那边没有响应」和「手机没有网络」（#64）\n- 对话页 / 原始画面：同一个 workspace 的 tab 快速切换，顶上 tab 条带状态，对话页左右滑切换，草稿和滚动位置都保留（#66）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.7/Tethera-0.7.ipa",
-      "size": 13833637
+      "version": "0.8",
+      "versionDate": "2026-11-07T13:08:26Z",
+      "versionDescription": "## 新功能\n- 对话页 markdown：表格真正渲染（表头、对齐、宽了横向滑），一条回复能从第一段连续拖选到最后一段；每条回复有复制按钮，代码块复制原文，表格复制成 tab 分隔文本（#68）\n- 全局搜索：顶栏放大镜，一处搜会话标题、空间、目录、电脑名、agent 类型，边打边出，按匹配度和「谁需要我」排序，可按状态筛选，记住最近访问（#71）",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.8/Tethera-0.8.ipa",
+      "size": 13932861
     }
   ],
   "news": []
