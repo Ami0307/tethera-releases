@@ -23,6 +23,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.7",
+          "buildVersion": "288",
+          "date": "2026-11-07T09:03:58Z",
+          "localizedDescription": "## 新功能\n- 切一下后台不再断开：短暂离开连接照常保持，回来先确认连接，断了才重连，并且不丢当前页面；连不上时区分「电脑那边没有响应」和「手机没有网络」（#64）\n- 对话页 / 原始画面：同一个 workspace 的 tab 快速切换，顶上 tab 条带状态，对话页左右滑切换，草稿和滚动位置都保留（#66）",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.7/Tethera-0.7.ipa",
+          "size": 13833637,
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.6",
           "buildVersion": "273",
           "date": "2026-11-07T01:58:41Z",
@@ -43,11 +52,11 @@
           "NSPhotoLibraryAddUsageDescription": "把对话里的图片存到你的相册。"
         }
       },
-      "version": "0.6",
-      "versionDate": "2026-11-07T01:58:41Z",
-      "versionDescription": "- workspace 里能新开 agent / tab：space 段头「＋」，选 agent、目录，可带一句 prompt（#48）\n- 对话页显示和发送图片：缩略图、全屏、存相册；从相册或相机发图，agent 那边真能拿到（#49）\n- pi 同目录多段记录：先自动排除，分不清时列候选让你选，选过记住（#50）\n- 输入框斜杠命令：按会话的 agent 补全，不存在的命令会拦下（#51）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.6/Tethera-0.6.ipa",
-      "size": 13750151
+      "version": "0.7",
+      "versionDate": "2026-11-07T09:03:58Z",
+      "versionDescription": "## 新功能\n- 切一下后台不再断开：短暂离开连接照常保持，回来先确认连接，断了才重连，并且不丢当前页面；连不上时区分「电脑那边没有响应」和「手机没有网络」（#64）\n- 对话页 / 原始画面：同一个 workspace 的 tab 快速切换，顶上 tab 条带状态，对话页左右滑切换，草稿和滚动位置都保留（#66）",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.7/Tethera-0.7.ipa",
+      "size": 13833637
     }
   ],
   "news": []
