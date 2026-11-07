@@ -23,6 +23,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.9",
+          "buildVersion": "318",
+          "date": "2026-11-07T14:19:31Z",
+          "localizedDescription": "## 新功能\n- 置顶会话：左滑、长按或对话页图钉把常用的会话钉在列表最上面，顺序可在「排序」里拖；离线变灰不消失，会话结束了会提示并可移除（#73）\n- 对话页滚动更流畅：列表改为懒加载，markdown、文本测高、图片尺寸都提前算好缓存；滚到底「新消息」提示自动消失（#76）\n- 会话标题：没有会话名时用 Herdr 里给 tab 起的名字；副标题不再重复类型名（#77）",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.9/Tethera-0.9.ipa",
+          "size": 14040646,
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.8",
           "buildVersion": "299",
           "date": "2026-11-07T13:08:26Z",
@@ -61,11 +70,11 @@
           "NSPhotoLibraryAddUsageDescription": "把对话里的图片存到你的相册。"
         }
       },
-      "version": "0.8",
-      "versionDate": "2026-11-07T13:08:26Z",
-      "versionDescription": "## 新功能\n- 对话页 markdown：表格真正渲染（表头、对齐、宽了横向滑），一条回复能从第一段连续拖选到最后一段；每条回复有复制按钮，代码块复制原文，表格复制成 tab 分隔文本（#68）\n- 全局搜索：顶栏放大镜，一处搜会话标题、空间、目录、电脑名、agent 类型，边打边出，按匹配度和「谁需要我」排序，可按状态筛选，记住最近访问（#71）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.8/Tethera-0.8.ipa",
-      "size": 13932861
+      "version": "0.9",
+      "versionDate": "2026-11-07T14:19:31Z",
+      "versionDescription": "## 新功能\n- 置顶会话：左滑、长按或对话页图钉把常用的会话钉在列表最上面，顺序可在「排序」里拖；离线变灰不消失，会话结束了会提示并可移除（#73）\n- 对话页滚动更流畅：列表改为懒加载，markdown、文本测高、图片尺寸都提前算好缓存；滚到底「新消息」提示自动消失（#76）\n- 会话标题：没有会话名时用 Herdr 里给 tab 起的名字；副标题不再重复类型名（#77）",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.9/Tethera-0.9.ipa",
+      "size": 14040646
     }
   ],
   "news": []
