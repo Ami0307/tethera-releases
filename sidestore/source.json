@@ -23,6 +23,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.12",
+          "buildVersion": "350",
+          "date": "2026-11-08T05:01:26Z",
+          "localizedDescription": "## 改进\n- 新开页「开什么」：Claude Code、Codex、Pi 前面加上官方 logo，终端用系统图标；pi 改成官方写法 Pi（#89）\n\n## 修复\n- 电脑连不上时的提示不再盖住顶部的搜索、筛选、设置和「N 台已连接」：改成标题下方的一条横幅，把内容往下推；带「重试」「去电脑详情」，可以收起，多台同时断合并成一条，恢复后自动消失（#91）",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.12/Tethera-0.12.ipa",
+          "size": 14135103,
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.11",
           "buildVersion": "338",
           "date": "2026-11-08T01:02:27Z",
@@ -57,15 +66,6 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.8/Tethera-0.8.ipa",
           "size": 13932861,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.7",
-          "buildVersion": "288",
-          "date": "2026-11-07T09:03:58Z",
-          "localizedDescription": "## 新功能\n- 切一下后台不再断开：短暂离开连接照常保持，回来先确认连接，断了才重连，并且不丢当前页面；连不上时区分「电脑那边没有响应」和「手机没有网络」（#64）\n- 对话页 / 原始画面：同一个 workspace 的 tab 快速切换，顶上 tab 条带状态，对话页左右滑切换，草稿和滚动位置都保留（#66）",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.7/Tethera-0.7.ipa",
-          "size": 13833637,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -79,11 +79,11 @@
           "NSPhotoLibraryAddUsageDescription": "把对话里的图片存到你的相册。"
         }
       },
-      "version": "0.11",
-      "versionDate": "2026-11-08T01:02:27Z",
-      "versionDescription": "## 修复\n- 对话页段落正文仍然往左偏、行首被裁（引用块正常）：原因是滚动内容被底部锚点按横向对齐平移了。现在消息列的横向偏移固定为 0，段落、列表、引用、代码块都在同一列里对齐（#86）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.11/Tethera-0.11.ipa",
-      "size": 14056327
+      "version": "0.12",
+      "versionDate": "2026-11-08T05:01:26Z",
+      "versionDescription": "## 改进\n- 新开页「开什么」：Claude Code、Codex、Pi 前面加上官方 logo，终端用系统图标；pi 改成官方写法 Pi（#89）\n\n## 修复\n- 电脑连不上时的提示不再盖住顶部的搜索、筛选、设置和「N 台已连接」：改成标题下方的一条横幅，把内容往下推；带「重试」「去电脑详情」，可以收起，多台同时断合并成一条，恢复后自动消失（#91）",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.12/Tethera-0.12.ipa",
+      "size": 14135103
     }
   ],
   "news": []
