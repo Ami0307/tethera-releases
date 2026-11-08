@@ -23,6 +23,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.13",
+          "buildVersion": "359",
+          "date": "2026-11-08T07:39:08Z",
+          "localizedDescription": "## 改进\n- 会话列表每一行改用对应客户端的官方 logo（Claude Code、Codex、Pi、终端），和「新开」里「开什么」用同一套图；状态由底色和角标显示（#94）\n- 对话页输入框改成系统液态玻璃：输入框、＋、发送/停止都是半透明玻璃，滚动时能透出背后的内容，交互不变（#95）",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.13/Tethera-0.13.ipa",
+          "size": 14128268,
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.12",
           "buildVersion": "350",
           "date": "2026-11-08T05:01:26Z",
@@ -57,15 +66,6 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.9/Tethera-0.9.ipa",
           "size": 14040646,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.8",
-          "buildVersion": "299",
-          "date": "2026-11-07T13:08:26Z",
-          "localizedDescription": "## 新功能\n- 对话页 markdown：表格真正渲染（表头、对齐、宽了横向滑），一条回复能从第一段连续拖选到最后一段；每条回复有复制按钮，代码块复制原文，表格复制成 tab 分隔文本（#68）\n- 全局搜索：顶栏放大镜，一处搜会话标题、空间、目录、电脑名、agent 类型，边打边出，按匹配度和「谁需要我」排序，可按状态筛选，记住最近访问（#71）",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.8/Tethera-0.8.ipa",
-          "size": 13932861,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -79,11 +79,11 @@
           "NSPhotoLibraryAddUsageDescription": "把对话里的图片存到你的相册。"
         }
       },
-      "version": "0.12",
-      "versionDate": "2026-11-08T05:01:26Z",
-      "versionDescription": "## 改进\n- 新开页「开什么」：Claude Code、Codex、Pi 前面加上官方 logo，终端用系统图标；pi 改成官方写法 Pi（#89）\n\n## 修复\n- 电脑连不上时的提示不再盖住顶部的搜索、筛选、设置和「N 台已连接」：改成标题下方的一条横幅，把内容往下推；带「重试」「去电脑详情」，可以收起，多台同时断合并成一条，恢复后自动消失（#91）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.12/Tethera-0.12.ipa",
-      "size": 14135103
+      "version": "0.13",
+      "versionDate": "2026-11-08T07:39:08Z",
+      "versionDescription": "## 改进\n- 会话列表每一行改用对应客户端的官方 logo（Claude Code、Codex、Pi、终端），和「新开」里「开什么」用同一套图；状态由底色和角标显示（#94）\n- 对话页输入框改成系统液态玻璃：输入框、＋、发送/停止都是半透明玻璃，滚动时能透出背后的内容，交互不变（#95）",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.13/Tethera-0.13.ipa",
+      "size": 14128268
     }
   ],
   "news": []
