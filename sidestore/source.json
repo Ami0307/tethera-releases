@@ -23,6 +23,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.11",
+          "buildVersion": "338",
+          "date": "2026-11-08T01:02:27Z",
+          "localizedDescription": "## 修复\n- 对话页段落正文仍然往左偏、行首被裁（引用块正常）：原因是滚动内容被底部锚点按横向对齐平移了。现在消息列的横向偏移固定为 0，段落、列表、引用、代码块都在同一列里对齐（#86）",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.11/Tethera-0.11.ipa",
+          "size": 14056327,
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.10",
           "buildVersion": "329",
           "date": "2026-11-07T15:10:47Z",
@@ -57,15 +66,6 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.7/Tethera-0.7.ipa",
           "size": 13833637,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.6",
-          "buildVersion": "273",
-          "date": "2026-11-07T01:58:41Z",
-          "localizedDescription": "- workspace 里能新开 agent / tab：space 段头「＋」，选 agent、目录，可带一句 prompt（#48）\n- 对话页显示和发送图片：缩略图、全屏、存相册；从相册或相机发图，agent 那边真能拿到（#49）\n- pi 同目录多段记录：先自动排除，分不清时列候选让你选，选过记住（#50）\n- 输入框斜杠命令：按会话的 agent 补全，不存在的命令会拦下（#51）",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.6/Tethera-0.6.ipa",
-          "size": 13750151,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -79,11 +79,11 @@
           "NSPhotoLibraryAddUsageDescription": "把对话里的图片存到你的相册。"
         }
       },
-      "version": "0.10",
-      "versionDate": "2026-11-07T15:10:47Z",
-      "versionDescription": "## 修复\n- 紧急：子 agent 的标题被父会话的 Herdr tab 名覆盖（两行同名）。现在 tab 名只给 tab 的主人用，子 agent 只用自己的名字；子行显示自己的状态；置顶父会话时整棵子树一起进出置顶区（#81）\n- 对话页正文整块往左偏、行首圆点被切：消息列固定为可见宽度减两侧边距，长链接和长行在列内换行，宽表格只让表格自己横滑（#82）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.10/Tethera-0.10.ipa",
-      "size": 14051530
+      "version": "0.11",
+      "versionDate": "2026-11-08T01:02:27Z",
+      "versionDescription": "## 修复\n- 对话页段落正文仍然往左偏、行首被裁（引用块正常）：原因是滚动内容被底部锚点按横向对齐平移了。现在消息列的横向偏移固定为 0，段落、列表、引用、代码块都在同一列里对齐（#86）",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.11/Tethera-0.11.ipa",
+      "size": 14056327
     }
   ],
   "news": []
