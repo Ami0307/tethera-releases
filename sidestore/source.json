@@ -23,6 +23,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.16",
+          "buildVersion": "410",
+          "date": "2026-11-09T03:18:51Z",
+          "localizedDescription": "## 新功能\n- 对话里的文件路径可以点开：只读预览、行号定位和语法着色；代码 diff 卡片会折叠没改动的行；一轮改了多个文件时可以按文件查看（#111）\n\n## 修复\n- Codex 会话里的 `configuration_update` 不再显示「无法显示的内容」，改成「推理强度设为 …」的系统提示（tethera-releases#3）",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.16/Tethera-0.16.ipa",
+          "size": 14411061,
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.15",
           "buildVersion": "391",
           "date": "2026-11-08T14:51:42Z",
@@ -57,21 +66,11 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.12/Tethera-0.12.ipa",
           "size": 14135103,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.11",
-          "buildVersion": "338",
-          "date": "2026-11-08T01:02:27Z",
-          "localizedDescription": "## 修复\n- 对话页段落正文仍然往左偏、行首被裁（引用块正常）：原因是滚动内容被底部锚点按横向对齐平移了。现在消息列的横向偏移固定为 0，段落、列表、引用、代码块都在同一列里对齐（#86）",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.11/Tethera-0.11.ipa",
-          "size": 14056327,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
         "entitlements": [
-          "com.apple.security.application-groups",
-          "get-task-allow"
+          "com.apple.security.application-groups"
         ],
         "privacy": {
           "NSCameraUsageDescription": "扫电脑上显示的配对二维码，把这台手机和电脑连起来；在对话里拍照发给 agent。",
@@ -81,11 +80,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.15",
-      "versionDate": "2026-11-08T14:51:42Z",
-      "versionDescription": "## 新功能\n- 对话页语音输入：输入栏的小麦克风，点一下开始、再点一下停止；在手机上本地识别，文字实时进输入框，改好再发。听的时候可以在中文和 English 之间切换（#106）\n\n## 修复\n- 电脑是 Windows 时读不到对话记录（「cannot start /bin/sh」）：Windows 上改由连接器直接回答，需要电脑端连接器更新到 0.1.4（tethera-releases#1）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.15/Tethera-0.15.ipa",
-      "size": 14310509
+      "version": "0.16",
+      "versionDate": "2026-11-09T03:18:51Z",
+      "versionDescription": "## 新功能\n- 对话里的文件路径可以点开：只读预览、行号定位和语法着色；代码 diff 卡片会折叠没改动的行；一轮改了多个文件时可以按文件查看（#111）\n\n## 修复\n- Codex 会话里的 `configuration_update` 不再显示「无法显示的内容」，改成「推理强度设为 …」的系统提示（tethera-releases#3）",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.16/Tethera-0.16.ipa",
+      "size": 14411061
     }
   ],
   "news": []
