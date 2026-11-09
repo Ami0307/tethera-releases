@@ -23,6 +23,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.17",
+          "buildVersion": "419",
+          "date": "2026-11-09T03:44:16Z",
+          "localizedDescription": "- 可以换 App 图标了：在「电脑 › App 图标」里选 Tethera（默认，主机和手机连在一根系绳上）、纸面、Herdr（Herdr 官方 logo）或刻痕（#118）",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.17/Tethera-0.17.ipa",
+          "size": 27908564,
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.16",
           "buildVersion": "410",
           "date": "2026-11-09T03:18:51Z",
@@ -57,15 +66,6 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.13/Tethera-0.13.ipa",
           "size": 14128268,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.12",
-          "buildVersion": "350",
-          "date": "2026-11-08T05:01:26Z",
-          "localizedDescription": "## 改进\n- 新开页「开什么」：Claude Code、Codex、Pi 前面加上官方 logo，终端用系统图标；pi 改成官方写法 Pi（#89）\n\n## 修复\n- 电脑连不上时的提示不再盖住顶部的搜索、筛选、设置和「N 台已连接」：改成标题下方的一条横幅，把内容往下推；带「重试」「去电脑详情」，可以收起，多台同时断合并成一条，恢复后自动消失（#91）",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.12/Tethera-0.12.ipa",
-          "size": 14135103,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -80,11 +80,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.16",
-      "versionDate": "2026-11-09T03:18:51Z",
-      "versionDescription": "## 新功能\n- 对话里的文件路径可以点开：只读预览、行号定位和语法着色；代码 diff 卡片会折叠没改动的行；一轮改了多个文件时可以按文件查看（#111）\n\n## 修复\n- Codex 会话里的 `configuration_update` 不再显示「无法显示的内容」，改成「推理强度设为 …」的系统提示（tethera-releases#3）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.16/Tethera-0.16.ipa",
-      "size": 14411061
+      "version": "0.17",
+      "versionDate": "2026-11-09T03:44:16Z",
+      "versionDescription": "- 可以换 App 图标了：在「电脑 › App 图标」里选 Tethera（默认，主机和手机连在一根系绳上）、纸面、Herdr（Herdr 官方 logo）或刻痕（#118）",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.17/Tethera-0.17.ipa",
+      "size": 27908564
     }
   ],
   "news": []
