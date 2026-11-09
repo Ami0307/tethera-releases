@@ -23,6 +23,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.20",
+          "buildVersion": "479",
+          "date": "2026-11-09T16:14:57Z",
+          "localizedDescription": "## 改进\n- 发送更快：点发送后消息马上出现在对话里，输入框上沿的细进度条显示发送中 / 成功 / 失败；失败的消息可以重试、改一改或删除（#129）\n- 排队与立即发送：agent 在干活时发的消息先排队，这一轮结束后按顺序自动发出；排队的消息上点「立即发送」会先停止当前这一轮再马上发出（#129）\n\n## 修复\n- Claude 提问时弹出键盘会卡住：提问卡片现在按可用空间限高、内容可滚，键盘弹起时可以收起，答完后布局复原（#130）\n- 对话里不再出现「无法显示的内容 · 不认识的记录类型 session-owner」这类会话元数据灰框（#128）",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.20/Tethera-0.20.ipa",
+          "size": 28513245,
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.19",
           "buildVersion": "456",
           "date": "2026-11-09T05:56:22Z",
@@ -57,15 +66,6 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.16/Tethera-0.16.ipa",
           "size": 14411061,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.15",
-          "buildVersion": "391",
-          "date": "2026-11-08T14:51:42Z",
-          "localizedDescription": "## 新功能\n- 对话页语音输入：输入栏的小麦克风，点一下开始、再点一下停止；在手机上本地识别，文字实时进输入框，改好再发。听的时候可以在中文和 English 之间切换（#106）\n\n## 修复\n- 电脑是 Windows 时读不到对话记录（「cannot start /bin/sh」）：Windows 上改由连接器直接回答，需要电脑端连接器更新到 0.1.4（tethera-releases#1）",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.15/Tethera-0.15.ipa",
-          "size": 14310509,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -81,11 +81,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.19",
-      "versionDate": "2026-11-09T05:56:22Z",
-      "versionDescription": "## 修复\n- 查询 Claude 的模型列表和用量时出错：两个查询会同时发到同一个终端，后一个被拒。现在排队依次查，用量数据晚到时也会多等一会儿（#123）\n\n## 改进\n- 模型列表和用量改成点了才查：打开对话或面板不再自动查；查询时显示「正在查询…」；查到的结果会记下来，下次打开直接显示并标注查询时间；标题旁有「刷新」（#123）\n- Windows 电脑加入工作区可以选盘符：路径条最前面多了「此电脑」，列出所有盘（带卷标和可用空间），选盘后照常浏览（tethera-releases#4）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.19/Tethera-0.19.ipa",
-      "size": 28456938
+      "version": "0.20",
+      "versionDate": "2026-11-09T16:14:57Z",
+      "versionDescription": "## 改进\n- 发送更快：点发送后消息马上出现在对话里，输入框上沿的细进度条显示发送中 / 成功 / 失败；失败的消息可以重试、改一改或删除（#129）\n- 排队与立即发送：agent 在干活时发的消息先排队，这一轮结束后按顺序自动发出；排队的消息上点「立即发送」会先停止当前这一轮再马上发出（#129）\n\n## 修复\n- Claude 提问时弹出键盘会卡住：提问卡片现在按可用空间限高、内容可滚，键盘弹起时可以收起，答完后布局复原（#130）\n- 对话里不再出现「无法显示的内容 · 不认识的记录类型 session-owner」这类会话元数据灰框（#128）",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.20/Tethera-0.20.ipa",
+      "size": 28513245
     }
   ],
   "news": []
