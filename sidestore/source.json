@@ -23,6 +23,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.21",
+          "buildVersion": "486",
+          "date": "2026-11-10T12:18:50Z",
+          "localizedDescription": "## 修复\n- 用 SideStore 安装失败（「An invalid value … was provided for the parameter 'appIdName'」）：小组件扩展的显示名改成英文 Tethera Widgets，中文系统里仍显示「Tethera 小组件」。0.16–0.20 用 SideStore 装不上的问题从这个版本起解决（tethera-releases#5，感谢 @hanilbert 的详细排查）",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.21/Tethera-0.21.ipa",
+          "size": 28514703,
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.20",
           "buildVersion": "479",
           "date": "2026-11-09T16:14:57Z",
@@ -57,15 +66,6 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.17/Tethera-0.17.ipa",
           "size": 27908564,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.16",
-          "buildVersion": "410",
-          "date": "2026-11-09T03:18:51Z",
-          "localizedDescription": "## 新功能\n- 对话里的文件路径可以点开：只读预览、行号定位和语法着色；代码 diff 卡片会折叠没改动的行；一轮改了多个文件时可以按文件查看（#111）\n\n## 修复\n- Codex 会话里的 `configuration_update` 不再显示「无法显示的内容」，改成「推理强度设为 …」的系统提示（tethera-releases#3）",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.16/Tethera-0.16.ipa",
-          "size": 14411061,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -81,11 +81,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.20",
-      "versionDate": "2026-11-09T16:14:57Z",
-      "versionDescription": "## 改进\n- 发送更快：点发送后消息马上出现在对话里，输入框上沿的细进度条显示发送中 / 成功 / 失败；失败的消息可以重试、改一改或删除（#129）\n- 排队与立即发送：agent 在干活时发的消息先排队，这一轮结束后按顺序自动发出；排队的消息上点「立即发送」会先停止当前这一轮再马上发出（#129）\n\n## 修复\n- Claude 提问时弹出键盘会卡住：提问卡片现在按可用空间限高、内容可滚，键盘弹起时可以收起，答完后布局复原（#130）\n- 对话里不再出现「无法显示的内容 · 不认识的记录类型 session-owner」这类会话元数据灰框（#128）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.20/Tethera-0.20.ipa",
-      "size": 28513245
+      "version": "0.21",
+      "versionDate": "2026-11-10T12:18:50Z",
+      "versionDescription": "## 修复\n- 用 SideStore 安装失败（「An invalid value … was provided for the parameter 'appIdName'」）：小组件扩展的显示名改成英文 Tethera Widgets，中文系统里仍显示「Tethera 小组件」。0.16–0.20 用 SideStore 装不上的问题从这个版本起解决（tethera-releases#5，感谢 @hanilbert 的详细排查）",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.21/Tethera-0.21.ipa",
+      "size": 28514703
     }
   ],
   "news": []
