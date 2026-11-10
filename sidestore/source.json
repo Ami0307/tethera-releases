@@ -23,6 +23,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.22",
+          "buildVersion": "494",
+          "date": "2026-11-10T15:27:30Z",
+          "localizedDescription": "## 改进\n- 「立即发送」不再打断当前任务：Claude Code / Codex 正在干活时，排队消息上点「立即发送」会直接把消息送进正在运行的这一轮，让 agent 接着处理，不再先停止。Pi 暂不显示「立即发送」，消息照常排队，等这一轮结束后自动发出（#137）",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.22/Tethera-0.22.ipa",
+          "size": 28512686,
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.21",
           "buildVersion": "486",
           "date": "2026-11-10T12:18:50Z",
@@ -57,15 +66,6 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.18/Tethera-0.18.ipa",
           "size": 28400741,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.17",
-          "buildVersion": "419",
-          "date": "2026-11-09T03:44:16Z",
-          "localizedDescription": "- 可以换 App 图标了：在「电脑 › App 图标」里选 Tethera（默认，主机和手机连在一根系绳上）、纸面、Herdr（Herdr 官方 logo）或刻痕（#118）",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.17/Tethera-0.17.ipa",
-          "size": 27908564,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -81,11 +81,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.21",
-      "versionDate": "2026-11-10T12:18:50Z",
-      "versionDescription": "## 修复\n- 用 SideStore 安装失败（「An invalid value … was provided for the parameter 'appIdName'」）：小组件扩展的显示名改成英文 Tethera Widgets，中文系统里仍显示「Tethera 小组件」。0.16–0.20 用 SideStore 装不上的问题从这个版本起解决（tethera-releases#5，感谢 @hanilbert 的详细排查）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.21/Tethera-0.21.ipa",
-      "size": 28514703
+      "version": "0.22",
+      "versionDate": "2026-11-10T15:27:30Z",
+      "versionDescription": "## 改进\n- 「立即发送」不再打断当前任务：Claude Code / Codex 正在干活时，排队消息上点「立即发送」会直接把消息送进正在运行的这一轮，让 agent 接着处理，不再先停止。Pi 暂不显示「立即发送」，消息照常排队，等这一轮结束后自动发出（#137）",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.22/Tethera-0.22.ipa",
+      "size": 28512686
     }
   ],
   "news": []
