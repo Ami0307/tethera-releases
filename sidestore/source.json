@@ -23,6 +23,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.26",
+          "buildVersion": "555",
+          "date": "2026-11-11T09:55:24Z",
+          "localizedDescription": "## 修复\n- 点进带操作卡片（等你确认、在问你）的会话时，对话内容被滚到屏幕外、卡片上方整片空白，要滑一下才恢复（#154）",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.26/Tethera-0.26.ipa",
+          "size": 28641941,
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.25",
           "buildVersion": "541",
           "date": "2026-11-11T08:14:11Z",
@@ -57,15 +66,6 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.22/Tethera-0.22.ipa",
           "size": 28512686,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.21",
-          "buildVersion": "486",
-          "date": "2026-11-10T12:18:50Z",
-          "localizedDescription": "## 修复\n- 用 SideStore 安装失败（「An invalid value … was provided for the parameter 'appIdName'」）：小组件扩展的显示名改成英文 Tethera Widgets，中文系统里仍显示「Tethera 小组件」。0.16–0.20 用 SideStore 装不上的问题从这个版本起解决（tethera-releases#5，感谢 @hanilbert 的详细排查）",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.21/Tethera-0.21.ipa",
-          "size": 28514703,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -80,11 +80,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.25",
-      "versionDate": "2026-11-11T08:14:11Z",
-      "versionDescription": "## 新功能\n- 对话页输入框里、模型胶囊旁边新增「权限模式」胶囊：能看到当前模式，点开可切换（Claude Code：每次都问 / 自动接受编辑 / 计划 / Auto / Bypass；Codex：Read Only / Default / Full Access）。Bypass 和 Full Access 用警示色并要二次确认；会话没有的模式不会出现在列表里（#151）\n\n## 修复\n- 读不到对话记录时，如果是因为这个 Claude Code 是从另一个 Claude Code 的环境里启动的（继承了 CLAUDE_CODE_CHILD_SESSION），直接说明原因和解决办法（#147）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.25/Tethera-0.25.ipa",
-      "size": 28640126
+      "version": "0.26",
+      "versionDate": "2026-11-11T09:55:24Z",
+      "versionDescription": "## 修复\n- 点进带操作卡片（等你确认、在问你）的会话时，对话内容被滚到屏幕外、卡片上方整片空白，要滑一下才恢复（#154）",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.26/Tethera-0.26.ipa",
+      "size": 28641941
     }
   ],
   "news": []
