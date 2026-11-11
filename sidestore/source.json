@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.29",
+          "buildVersion": "597",
+          "date": "2026-11-11T13:50:11Z",
+          "localizedDescription": "## 新功能\n\n- 对话页底部的输入框、附图条、语音面板融为一体：附图条和语音面板出现时从输入框里「长出来」（#173）。\n- 会话列表顶部按钮统一成液态玻璃，电脑名胶囊也改成玻璃（#174）。\n- 状态提醒横幅、重连卡片、看大图页面的按钮和提示改成液态玻璃（#171、#172）。\n\n## 修复\n\n- 会话被提到顶部「进行中」后，它所在的空间不再从列表里消失，会留一行占位，点了跳到顶部；顶部卡片带上空间编号（#170）。\n- 会话列表顶栏的左右边距恢复成 20（#164）。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.29/Tethera-0.29.ipa",
+          "size": 28690289,
+          "sha256": "17e330a7ecb2a77218895a671bf7d9a2ad892c50a6f1b84a6b5a305b8a44d1cf",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.28",
           "buildVersion": "581",
           "date": "2026-11-11T12:12:52Z",
@@ -59,15 +69,6 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.25/Tethera-0.25.ipa",
           "size": 28640126,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.24",
-          "buildVersion": "525",
-          "date": "2026-11-11T07:14:08Z",
-          "localizedDescription": "## 新功能\n- 对话页显示运行状态（思考中、已运行时长），每一轮的中间过程默认折叠成一行，点开才展开（tethera-releases#7）\n- 对话页输入区改成一个大输入框：模型胶囊、加号、语音、发送都收进框里，多行时向上增高；导航栏不再有模型入口（#145）\n\n## 修复\n- 对话记录改为按字节偏移读取：轮询开销不再随文件变大，首屏加载有上限，超过 64 MB 的大对话记录也能打开（#143，需要电脑端连接器 0.1.5）",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.24/Tethera-0.24.ipa",
-          "size": 28533650,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -82,11 +83,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.28",
-      "versionDate": "2026-11-11T12:12:52Z",
-      "versionDescription": "## 新功能\n\n- 输入框「＋」菜单新增「添加文件」：从「文件」App 选任意文件（最大 20 MB）发给 agent，和图片一样先传到电脑上，消息里带路径（#163）。暂不支持 Windows 电脑。\n- 对话页模型按钮换成仪表盘图标，弧线显示当前思考强度（#162）。\n- 会话列表视觉调整：每个会话一个浅色块，字号字重更轻，要注意的会话才显示三行，分组标题「working」改为「进行中」（#164）。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.28/Tethera-0.28.ipa",
-      "size": 28679241
+      "version": "0.29",
+      "versionDate": "2026-11-11T13:50:11Z",
+      "versionDescription": "## 新功能\n\n- 对话页底部的输入框、附图条、语音面板融为一体：附图条和语音面板出现时从输入框里「长出来」（#173）。\n- 会话列表顶部按钮统一成液态玻璃，电脑名胶囊也改成玻璃（#174）。\n- 状态提醒横幅、重连卡片、看大图页面的按钮和提示改成液态玻璃（#171、#172）。\n\n## 修复\n\n- 会话被提到顶部「进行中」后，它所在的空间不再从列表里消失，会留一行占位，点了跳到顶部；顶部卡片带上空间编号（#170）。\n- 会话列表顶栏的左右边距恢复成 20（#164）。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.29/Tethera-0.29.ipa",
+      "size": 28690289
     }
   ],
   "news": []
