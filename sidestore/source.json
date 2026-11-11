@@ -23,6 +23,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.23",
+          "buildVersion": "501",
+          "date": "2026-11-11T01:19:00Z",
+          "localizedDescription": "## 修复\n- App 里新建的 Claude Code 会话对话界面一直为空：启动 Claude Code 前去掉从上层 Claude Code 会话继承来的环境变量；如果仍然读不到对话记录，对话页会提示「找不到这个会话的对话记录」并可一键打开原始画面（tethera-releases#6，感谢 @hanilbert 的排查）\n- 手机发出的消息切到原始画面再回来后不再消失",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.23/Tethera-0.23.ipa",
+          "size": 28520969,
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.22",
           "buildVersion": "494",
           "date": "2026-11-10T15:27:30Z",
@@ -57,15 +66,6 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.19/Tethera-0.19.ipa",
           "size": 28456938,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.18",
-          "buildVersion": "441",
-          "date": "2026-11-09T04:54:18Z",
-          "localizedDescription": "## 新功能\n- 加入工作区：会话列表顶栏的文件夹按钮（或列表底部「＋ 加入工作区」），浏览电脑上的目录，在选中的目录开工作区；已有这个目录的空间就作为它的新标签，否则新开一个空间。只读，不改任何文件夹（tethera-releases#2）\n- 对话页切换模型和思考强度：右上角的模型芯片（宽屏是胶囊），点开选模型和强度，agent 空闲时切换；同时能看用量（tethera-releases#2）\n- 设置拆分：配对 / 连接留在右上角，其他设置进右下角的液态玻璃按钮打开的「设置」页",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.18/Tethera-0.18.ipa",
-          "size": 28400741,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -81,11 +81,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.22",
-      "versionDate": "2026-11-10T15:27:30Z",
-      "versionDescription": "## 改进\n- 「立即发送」不再打断当前任务：Claude Code / Codex 正在干活时，排队消息上点「立即发送」会直接把消息送进正在运行的这一轮，让 agent 接着处理，不再先停止。Pi 暂不显示「立即发送」，消息照常排队，等这一轮结束后自动发出（#137）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.22/Tethera-0.22.ipa",
-      "size": 28512686
+      "version": "0.23",
+      "versionDate": "2026-11-11T01:19:00Z",
+      "versionDescription": "## 修复\n- App 里新建的 Claude Code 会话对话界面一直为空：启动 Claude Code 前去掉从上层 Claude Code 会话继承来的环境变量；如果仍然读不到对话记录，对话页会提示「找不到这个会话的对话记录」并可一键打开原始画面（tethera-releases#6，感谢 @hanilbert 的排查）\n- 手机发出的消息切到原始画面再回来后不再消失",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.23/Tethera-0.23.ipa",
+      "size": 28520969
     }
   ],
   "news": []
