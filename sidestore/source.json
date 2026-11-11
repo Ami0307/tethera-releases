@@ -23,6 +23,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.24",
+          "buildVersion": "525",
+          "date": "2026-11-11T07:14:08Z",
+          "localizedDescription": "## 新功能\n- 对话页显示运行状态（思考中、已运行时长），每一轮的中间过程默认折叠成一行，点开才展开（tethera-releases#7）\n- 对话页输入区改成一个大输入框：模型胶囊、加号、语音、发送都收进框里，多行时向上增高；导航栏不再有模型入口（#145）\n\n## 修复\n- 对话记录改为按字节偏移读取：轮询开销不再随文件变大，首屏加载有上限，超过 64 MB 的大对话记录也能打开（#143，需要电脑端连接器 0.1.5）",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.24/Tethera-0.24.ipa",
+          "size": 28533650,
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.23",
           "buildVersion": "501",
           "date": "2026-11-11T01:19:00Z",
@@ -57,21 +66,11 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.20/Tethera-0.20.ipa",
           "size": 28513245,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.19",
-          "buildVersion": "456",
-          "date": "2026-11-09T05:56:22Z",
-          "localizedDescription": "## 修复\n- 查询 Claude 的模型列表和用量时出错：两个查询会同时发到同一个终端，后一个被拒。现在排队依次查，用量数据晚到时也会多等一会儿（#123）\n\n## 改进\n- 模型列表和用量改成点了才查：打开对话或面板不再自动查；查询时显示「正在查询…」；查到的结果会记下来，下次打开直接显示并标注查询时间；标题旁有「刷新」（#123）\n- Windows 电脑加入工作区可以选盘符：路径条最前面多了「此电脑」，列出所有盘（带卷标和可用空间），选盘后照常浏览（tethera-releases#4）",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.19/Tethera-0.19.ipa",
-          "size": 28456938,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
         "entitlements": [
-          "com.apple.security.application-groups",
-          "get-task-allow"
+          "com.apple.security.application-groups"
         ],
         "privacy": {
           "NSCameraUsageDescription": "扫电脑上显示的配对二维码，把这台手机和电脑连起来；在对话里拍照发给 agent。",
@@ -81,11 +80,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.23",
-      "versionDate": "2026-11-11T01:19:00Z",
-      "versionDescription": "## 修复\n- App 里新建的 Claude Code 会话对话界面一直为空：启动 Claude Code 前去掉从上层 Claude Code 会话继承来的环境变量；如果仍然读不到对话记录，对话页会提示「找不到这个会话的对话记录」并可一键打开原始画面（tethera-releases#6，感谢 @hanilbert 的排查）\n- 手机发出的消息切到原始画面再回来后不再消失",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.23/Tethera-0.23.ipa",
-      "size": 28520969
+      "version": "0.24",
+      "versionDate": "2026-11-11T07:14:08Z",
+      "versionDescription": "## 新功能\n- 对话页显示运行状态（思考中、已运行时长），每一轮的中间过程默认折叠成一行，点开才展开（tethera-releases#7）\n- 对话页输入区改成一个大输入框：模型胶囊、加号、语音、发送都收进框里，多行时向上增高；导航栏不再有模型入口（#145）\n\n## 修复\n- 对话记录改为按字节偏移读取：轮询开销不再随文件变大，首屏加载有上限，超过 64 MB 的大对话记录也能打开（#143，需要电脑端连接器 0.1.5）",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.24/Tethera-0.24.ipa",
+      "size": 28533650
     }
   ],
   "news": []
