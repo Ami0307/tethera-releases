@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.27",
+          "buildVersion": "564",
+          "date": "2026-11-11T10:11:34Z",
+          "localizedDescription": "- 会话列表：一个项目下的会话和终端超过 3 个时只显示 3 个，点「展开其余 N 个」看全部，再点「收起」收回；等你确认、有未读的会话不会被折叠（#156）",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.27/Tethera-0.27.ipa",
+          "size": 28650585,
+          "sha256": "633d33126c980e307b86b26e546a12afe94555dfff1a235031567818e5acf910",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.26",
           "buildVersion": "555",
           "date": "2026-11-11T09:55:24Z",
@@ -57,15 +67,6 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.23/Tethera-0.23.ipa",
           "size": 28520969,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.22",
-          "buildVersion": "494",
-          "date": "2026-11-10T15:27:30Z",
-          "localizedDescription": "## 改进\n- 「立即发送」不再打断当前任务：Claude Code / Codex 正在干活时，排队消息上点「立即发送」会直接把消息送进正在运行的这一轮，让 agent 接着处理，不再先停止。Pi 暂不显示「立即发送」，消息照常排队，等这一轮结束后自动发出（#137）",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.22/Tethera-0.22.ipa",
-          "size": 28512686,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -80,11 +81,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.26",
-      "versionDate": "2026-11-11T09:55:24Z",
-      "versionDescription": "## 修复\n- 点进带操作卡片（等你确认、在问你）的会话时，对话内容被滚到屏幕外、卡片上方整片空白，要滑一下才恢复（#154）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.26/Tethera-0.26.ipa",
-      "size": 28641941
+      "version": "0.27",
+      "versionDate": "2026-11-11T10:11:34Z",
+      "versionDescription": "- 会话列表：一个项目下的会话和终端超过 3 个时只显示 3 个，点「展开其余 N 个」看全部，再点「收起」收回；等你确认、有未读的会话不会被折叠（#156）",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.27/Tethera-0.27.ipa",
+      "size": 28650585
     }
   ],
   "news": []
