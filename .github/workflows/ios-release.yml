@@ -153,7 +153,6 @@ jobs:
       RELEASE_REPO: ${{ inputs.release-repo || github.repository }}
       APP_NAME: ${{ inputs.app-name }}
       BUNDLE_ID: ${{ inputs.bundle-id }}
-      WORK_DIR: ${{ runner.temp }}/ios-release
     steps:
       - name: Check trigger
         env:
@@ -165,6 +164,9 @@ jobs:
             exit 1
           fi
           echo "Releasing $SOURCE_REPO $TAG"
+          # The runner context is not available in job-level env, so the work
+          # directory is set here for the steps that follow.
+          echo "WORK_DIR=$RUNNER_TEMP/ios-release" >> "$GITHUB_ENV"
 
       - name: Check out the tag
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
