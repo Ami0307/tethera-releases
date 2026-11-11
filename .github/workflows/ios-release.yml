@@ -1,0 +1,271 @@
+# Reusable workflow: build an ad-hoc signed IPA on a self-hosted Mac when a release tag
+# is pushed, upload it to a GitHub Release and update a SideStore / AltStore source.
+#
+# Call it from a workflow in the app repository that only runs on `push: tags`, and
+# guard the job with `if: github.repository == '<owner>/<repo>'` so forks never run it:
+#
+#   jobs:
+#     ipa:
+#       if: github.repository == 'owner/app'
+#       permissions:
+#         contents: write
+#       uses: Ami0307/tethera-releases/.github/workflows/ios-release.yml@<sha>
+#       with:
+#         app-name: MyApp
+#         bundle-id: com.example.myapp
+#         build-command: bash scripts/build-ios-ipa.sh --output "$OUTPUT_DIR"
+#       secrets:
+#         release-token: ${{ secrets.RELEASES_TOKEN }}   # only if release-repo is another repo
+#
+# Release notes come from the annotated tag: `git tag -a v1.2 -F notes.md`, where the
+# first line of notes.md is a title (dropped) and the rest are the notes. A line that is
+# exactly `---` ends the part shown in SideStore; the GitHub Release gets all of it.
+#
+# The build runs your `build-command` in the checked-out tag with OUTPUT_DIR set to an
+# empty directory. It must leave exactly one .ipa there (up to two folders deep), may
+# leave one .xcarchive (version and build are then read from its Info.plist) and one
+# *build-info.txt (attached to the release). No Apple ID or certificate is involved:
+# sign ad-hoc and let SideStore re-sign with the installing user's Apple ID.
+name: iOS release (reusable)
+
+on:
+  workflow_call:
+    inputs:
+      app-name:
+        description: App name, used in release titles, commit messages and the default asset name.
+        type: string
+        required: true
+      bundle-id:
+        description: Expected CFBundleIdentifier of the app; also finds the app in the source.
+        type: string
+        required: true
+      build-command:
+        description: Bash run at the root of the checked-out tag. Must write the IPA into $OUTPUT_DIR.
+        type: string
+        required: true
+      verify-command:
+        description: Optional bash run after the build with IPA_PATH and ARCHIVE_PATH (may be empty) set.
+        type: string
+        default: ""
+      runner-labels:
+        description: JSON array of runner labels.
+        type: string
+        default: '["self-hosted", "macOS", "ios-release"]'
+      release-repo:
+        description: owner/repo that hosts the IPA releases and the source (default the calling repository).
+        type: string
+        default: ""
+      release-branch:
+        description: Branch of release-repo that holds the source file.
+        type: string
+        default: main
+      release-tag-prefix:
+        description: The IPA is attached to release <prefix><version> in release-repo.
+        type: string
+        default: v
+      asset-name:
+        description: IPA file name in the release; {app}, {version} and {build} are replaced.
+        type: string
+        default: "{app}-{version}.ipa"
+      source-path:
+        description: Path of the source JSON in release-repo.
+        type: string
+        default: sidestore/source.json
+      app-template-path:
+        description: Path in release-repo of the app's metadata (JSON without versions), used when the source does not list the app yet.
+        type: string
+        default: ""
+      icon-path:
+        description: Icon PNG in the calling repository, copied next to the source as icon.png if that is missing.
+        type: string
+        default: ""
+      keep-versions:
+        description: Keep only the newest N versions in the source (0 keeps all).
+        type: number
+        default: 0
+      prune-releases:
+        description: Delete releases in release-repo whose tag starts with release-tag-prefix and that fell out of the source.
+        type: boolean
+        default: false
+      mark-latest:
+        description: Mark the IPA release in release-repo as the repository's latest release.
+        type: boolean
+        default: false
+      attach-to-tag-release:
+        description: Also create / update the release of the pushed tag in the calling repository and attach the IPA.
+        type: boolean
+        default: false
+      check-ascii-bundle-names:
+        description: Fail if CFBundleName / CFBundleDisplayName of the app or an extension is not ASCII (SideStore cannot install it).
+        type: boolean
+        default: true
+      require-tag-match:
+        description: Fail unless the tag without its leading non-digits equals CFBundleShortVersionString.
+        type: boolean
+        default: true
+      dry-run:
+        description: Build and show what would change, but upload, push and delete nothing.
+        type: boolean
+        default: false
+      timeout-minutes:
+        description: Job timeout.
+        type: number
+        default: 60
+      tools-ref:
+        description: Ref of Ami0307/tethera-releases to take scripts/ios-release from; keep it equal to the ref in `uses:`.
+        type: string
+        default: main
+    secrets:
+      release-token:
+        description: Token with contents read/write on release-repo. Not needed when release-repo is the calling repository.
+        required: false
+    outputs:
+      version:
+        description: CFBundleShortVersionString of the IPA.
+        value: ${{ jobs.release.outputs.version }}
+      build:
+        description: CFBundleVersion of the IPA.
+        value: ${{ jobs.release.outputs.build }}
+      download-url:
+        description: Download URL of the IPA written into the source.
+        value: ${{ jobs.release.outputs.download-url }}
+
+jobs:
+  release:
+    name: Build IPA and update SideStore source
+    runs-on: ${{ fromJSON(inputs.runner-labels) }}
+    timeout-minutes: ${{ inputs.timeout-minutes }}
+    # One publish per source at a time, so two tags never race on source.json.
+    concurrency:
+      group: ios-release-${{ inputs.release-repo || github.repository }}
+      cancel-in-progress: false
+    outputs:
+      version: ${{ steps.inspect.outputs.version }}
+      build: ${{ steps.inspect.outputs.build }}
+      download-url: ${{ steps.publish.outputs.download-url }}
+    defaults:
+      run:
+        # bash -eo pipefail
+        shell: bash
+    env:
+      TAG: ${{ github.ref_name }}
+      SOURCE_REPO: ${{ github.repository }}
+      RELEASE_REPO: ${{ inputs.release-repo || github.repository }}
+      APP_NAME: ${{ inputs.app-name }}
+      BUNDLE_ID: ${{ inputs.bundle-id }}
+      WORK_DIR: ${{ runner.temp }}/ios-release
+    steps:
+      - name: Check trigger
+        env:
+          REF_TYPE: ${{ github.ref_type }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          if [ "$REF_TYPE" != tag ] || [ "$EVENT" != push ]; then
+            echo "This workflow publishes releases and only runs for a pushed tag (got $EVENT on a $REF_TYPE)." >&2
+            exit 1
+          fi
+          echo "Releasing $SOURCE_REPO $TAG"
+
+      - name: Check out the tag
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: src
+          # Build numbers may be derived from the commit count, so fetch full history.
+          fetch-depth: 0
+          persist-credentials: false
+          clean: true
+
+      - name: Check out release tools
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Ami0307/tethera-releases
+          ref: ${{ inputs.tools-ref }}
+          path: tools
+          sparse-checkout: scripts/ios-release
+          persist-credentials: false
+
+      - name: Read release notes from the tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf "$WORK_DIR" && mkdir -p "$WORK_DIR"
+          ref=$(gh api "repos/$SOURCE_REPO/git/ref/tags/$TAG" --jq '.object.type + " " + .object.sha')
+          if [ "${ref%% *}" != tag ]; then
+            echo "$TAG is a lightweight tag. Tag with: git tag -a $TAG -F notes.md (first line = title, then the notes)." >&2
+            exit 1
+          fi
+          gh api "repos/$SOURCE_REPO/git/tags/${ref#* }" --jq .message > "$WORK_DIR/tag-message.txt"
+          python3 -I tools/scripts/ios-release/sidestore.py notes \
+            --message-file "$WORK_DIR/tag-message.txt" \
+            --sidestore-out "$WORK_DIR/sidestore-notes.md" \
+            --release-out "$WORK_DIR/release-notes.md"
+          echo "--- notes for SideStore"; cat "$WORK_DIR/sidestore-notes.md"
+
+      - name: Build
+        working-directory: src
+        env:
+          BUILD_COMMAND: ${{ inputs.build-command }}
+        run: |
+          export OUTPUT_DIR="$WORK_DIR/out"
+          mkdir -p "$OUTPUT_DIR"
+          bash -euo pipefail -c "$BUILD_COMMAND"
+          ipas=() archives=() infos=()
+          while IFS= read -r f; do ipas+=("$f"); done < <(find "$OUTPUT_DIR" -maxdepth 3 -type f -name '*.ipa')
+          while IFS= read -r f; do archives+=("$f"); done < <(find "$OUTPUT_DIR" -maxdepth 3 -type d -name '*.xcarchive' -prune)
+          while IFS= read -r f; do infos+=("$f"); done < <(find "$OUTPUT_DIR" -maxdepth 3 -type f -name '*build-info.txt')
+          [ "${#ipas[@]}" -eq 1 ] || { echo "Expected one .ipa in OUTPUT_DIR, found ${#ipas[@]}." >&2; exit 1; }
+          [ "${#archives[@]}" -le 1 ] || { echo "Found ${#archives[@]} .xcarchive in OUTPUT_DIR; leave at most one." >&2; exit 1; }
+          [ "${#infos[@]}" -le 1 ] || { echo "Found ${#infos[@]} build-info files in OUTPUT_DIR; leave at most one." >&2; exit 1; }
+          {
+            echo "IPA_PATH=${ipas[0]}"
+            echo "ARCHIVE_PATH=${archives[0]:-}"
+            echo "BUILD_INFO_PATH=${infos[0]:-}"
+          } >> "$GITHUB_ENV"
+
+      - name: Verify
+        if: inputs.verify-command != ''
+        working-directory: src
+        env:
+          VERIFY_COMMAND: ${{ inputs.verify-command }}
+        run: bash -euo pipefail -c "$VERIFY_COMMAND"
+
+      - name: Inspect IPA
+        id: inspect
+        env:
+          REQUIRE_TAG_MATCH: ${{ inputs.require-tag-match }}
+          CHECK_ASCII: ${{ inputs.check-ascii-bundle-names }}
+        run: |
+          flags=()
+          [ "$REQUIRE_TAG_MATCH" = true ] && flags+=(--require-tag-match)
+          [ "$CHECK_ASCII" = true ] && flags+=(--check-ascii)
+          python3 -I tools/scripts/ios-release/sidestore.py inspect \
+            --ipa "$IPA_PATH" --archive "$ARCHIVE_PATH" --bundle-id "$BUNDLE_ID" --tag "$TAG" \
+            ${flags[@]+"${flags[@]}"} | tee -a "$GITHUB_OUTPUT"
+
+      - name: Publish
+        id: publish
+        env:
+          TOOLS_DIR: ${{ github.workspace }}/tools/scripts/ios-release
+          CALLER_TOKEN: ${{ github.token }}
+          RELEASE_TOKEN: ${{ secrets.release-token || github.token }}
+          VERSION: ${{ steps.inspect.outputs.version }}
+          BUILD: ${{ steps.inspect.outputs.build }}
+          MIN_OS: ${{ steps.inspect.outputs.min_os }}
+          SIZE: ${{ steps.inspect.outputs.size }}
+          SHA256: ${{ steps.inspect.outputs.sha256 }}
+          RELEASE_BRANCH: ${{ inputs.release-branch }}
+          RELEASE_TAG_PREFIX: ${{ inputs.release-tag-prefix }}
+          ASSET_NAME_TEMPLATE: ${{ inputs.asset-name }}
+          SOURCE_PATH: ${{ inputs.source-path }}
+          APP_TEMPLATE_PATH: ${{ inputs.app-template-path }}
+          ICON_INPUT: ${{ inputs.icon-path }}
+          KEEP_VERSIONS: ${{ inputs.keep-versions }}
+          PRUNE_RELEASES: ${{ inputs.prune-releases }}
+          MARK_LATEST: ${{ inputs.mark-latest }}
+          ATTACH_TO_TAG_RELEASE: ${{ inputs.attach-to-tag-release }}
+          DRY_RUN: ${{ inputs.dry-run }}
+        run: |
+          export SIDESTORE_NOTES="$WORK_DIR/sidestore-notes.md" RELEASE_NOTES="$WORK_DIR/release-notes.md"
+          export ICON_PATH=""
+          [ -n "$ICON_INPUT" ] && ICON_PATH="$GITHUB_WORKSPACE/src/$ICON_INPUT"
+          bash tools/scripts/ios-release/publish.sh
