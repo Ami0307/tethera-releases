@@ -23,6 +23,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.25",
+          "buildVersion": "541",
+          "date": "2026-11-11T08:14:11Z",
+          "localizedDescription": "## 新功能\n- 对话页输入框里、模型胶囊旁边新增「权限模式」胶囊：能看到当前模式，点开可切换（Claude Code：每次都问 / 自动接受编辑 / 计划 / Auto / Bypass；Codex：Read Only / Default / Full Access）。Bypass 和 Full Access 用警示色并要二次确认；会话没有的模式不会出现在列表里（#151）\n\n## 修复\n- 读不到对话记录时，如果是因为这个 Claude Code 是从另一个 Claude Code 的环境里启动的（继承了 CLAUDE_CODE_CHILD_SESSION），直接说明原因和解决办法（#147）",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.25/Tethera-0.25.ipa",
+          "size": 28640126,
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.24",
           "buildVersion": "525",
           "date": "2026-11-11T07:14:08Z",
@@ -57,15 +66,6 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.21/Tethera-0.21.ipa",
           "size": 28514703,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.20",
-          "buildVersion": "479",
-          "date": "2026-11-09T16:14:57Z",
-          "localizedDescription": "## 改进\n- 发送更快：点发送后消息马上出现在对话里，输入框上沿的细进度条显示发送中 / 成功 / 失败；失败的消息可以重试、改一改或删除（#129）\n- 排队与立即发送：agent 在干活时发的消息先排队，这一轮结束后按顺序自动发出；排队的消息上点「立即发送」会先停止当前这一轮再马上发出（#129）\n\n## 修复\n- Claude 提问时弹出键盘会卡住：提问卡片现在按可用空间限高、内容可滚，键盘弹起时可以收起，答完后布局复原（#130）\n- 对话里不再出现「无法显示的内容 · 不认识的记录类型 session-owner」这类会话元数据灰框（#128）",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.20/Tethera-0.20.ipa",
-          "size": 28513245,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -80,11 +80,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.24",
-      "versionDate": "2026-11-11T07:14:08Z",
-      "versionDescription": "## 新功能\n- 对话页显示运行状态（思考中、已运行时长），每一轮的中间过程默认折叠成一行，点开才展开（tethera-releases#7）\n- 对话页输入区改成一个大输入框：模型胶囊、加号、语音、发送都收进框里，多行时向上增高；导航栏不再有模型入口（#145）\n\n## 修复\n- 对话记录改为按字节偏移读取：轮询开销不再随文件变大，首屏加载有上限，超过 64 MB 的大对话记录也能打开（#143，需要电脑端连接器 0.1.5）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.24/Tethera-0.24.ipa",
-      "size": 28533650
+      "version": "0.25",
+      "versionDate": "2026-11-11T08:14:11Z",
+      "versionDescription": "## 新功能\n- 对话页输入框里、模型胶囊旁边新增「权限模式」胶囊：能看到当前模式，点开可切换（Claude Code：每次都问 / 自动接受编辑 / 计划 / Auto / Bypass；Codex：Read Only / Default / Full Access）。Bypass 和 Full Access 用警示色并要二次确认；会话没有的模式不会出现在列表里（#151）\n\n## 修复\n- 读不到对话记录时，如果是因为这个 Claude Code 是从另一个 Claude Code 的环境里启动的（继承了 CLAUDE_CODE_CHILD_SESSION），直接说明原因和解决办法（#147）",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.25/Tethera-0.25.ipa",
+      "size": 28640126
     }
   ],
   "news": []
