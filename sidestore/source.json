@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.28",
+          "buildVersion": "581",
+          "date": "2026-11-11T12:12:52Z",
+          "localizedDescription": "## 新功能\n\n- 输入框「＋」菜单新增「添加文件」：从「文件」App 选任意文件（最大 20 MB）发给 agent，和图片一样先传到电脑上，消息里带路径（#163）。暂不支持 Windows 电脑。\n- 对话页模型按钮换成仪表盘图标，弧线显示当前思考强度（#162）。\n- 会话列表视觉调整：每个会话一个浅色块，字号字重更轻，要注意的会话才显示三行，分组标题「working」改为「进行中」（#164）。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.28/Tethera-0.28.ipa",
+          "size": 28679241,
+          "sha256": "1afc8f49f9420e7891998089fc081349e1861e7268a5ac40830e7031e0dc966e",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.27",
           "buildVersion": "564",
           "date": "2026-11-11T10:11:34Z",
@@ -58,15 +68,6 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.24/Tethera-0.24.ipa",
           "size": 28533650,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.23",
-          "buildVersion": "501",
-          "date": "2026-11-11T01:19:00Z",
-          "localizedDescription": "## 修复\n- App 里新建的 Claude Code 会话对话界面一直为空：启动 Claude Code 前去掉从上层 Claude Code 会话继承来的环境变量；如果仍然读不到对话记录，对话页会提示「找不到这个会话的对话记录」并可一键打开原始画面（tethera-releases#6，感谢 @hanilbert 的排查）\n- 手机发出的消息切到原始画面再回来后不再消失",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.23/Tethera-0.23.ipa",
-          "size": 28520969,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -81,11 +82,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.27",
-      "versionDate": "2026-11-11T10:11:34Z",
-      "versionDescription": "- 会话列表：一个项目下的会话和终端超过 3 个时只显示 3 个，点「展开其余 N 个」看全部，再点「收起」收回；等你确认、有未读的会话不会被折叠（#156）",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.27/Tethera-0.27.ipa",
-      "size": 28650585
+      "version": "0.28",
+      "versionDate": "2026-11-11T12:12:52Z",
+      "versionDescription": "## 新功能\n\n- 输入框「＋」菜单新增「添加文件」：从「文件」App 选任意文件（最大 20 MB）发给 agent，和图片一样先传到电脑上，消息里带路径（#163）。暂不支持 Windows 电脑。\n- 对话页模型按钮换成仪表盘图标，弧线显示当前思考强度（#162）。\n- 会话列表视觉调整：每个会话一个浅色块，字号字重更轻，要注意的会话才显示三行，分组标题「working」改为「进行中」（#164）。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.28/Tethera-0.28.ipa",
+      "size": 28679241
     }
   ],
   "news": []
