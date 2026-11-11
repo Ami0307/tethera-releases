@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.30",
+          "buildVersion": "621",
+          "date": "2026-11-11T23:28:28Z",
+          "localizedDescription": "## 新功能\n\n- 添加 SSH 电脑改成分步引导：先核对电脑指纹，再输一次登录密码，App 自动把钥匙加到电脑上，每一步都显示进度（#181）。\n- 切换模型不用再等：确认后面板马上关掉，在后台切换，期间发送按钮转圈，失败会在对话里提示「切换失败」（#188）。\n- 对话页选的图片和输入框合成一个气泡，图片显示在输入框里（#186）。\n- 对话正文改用 New York 衬线体，行距和段距放松，读起来更舒服（#187）。\n- 会话列表的用量在有多个 agent 时改成每个一个独立气泡，两列排列（#184）。\n\n## 修复\n\n- 会话列表右上角去掉重复的「加入工作区」按钮，只留列表底部那个（#182）。\n- 置顶的会话也算进它所属空间的会话数；空间只剩 1 个会话时也显示数量（#180）。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.30/Tethera-0.30.ipa",
+          "size": 28822489,
+          "sha256": "57f88dea6706526a62dbebcaa604eefb044f4f2ec035ed07179fa9a8ef54cea0",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.29",
           "buildVersion": "597",
           "date": "2026-11-11T13:50:11Z",
@@ -60,15 +70,6 @@
           "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.26/Tethera-0.26.ipa",
           "size": 28641941,
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.25",
-          "buildVersion": "541",
-          "date": "2026-11-11T08:14:11Z",
-          "localizedDescription": "## 新功能\n- 对话页输入框里、模型胶囊旁边新增「权限模式」胶囊：能看到当前模式，点开可切换（Claude Code：每次都问 / 自动接受编辑 / 计划 / Auto / Bypass；Codex：Read Only / Default / Full Access）。Bypass 和 Full Access 用警示色并要二次确认；会话没有的模式不会出现在列表里（#151）\n\n## 修复\n- 读不到对话记录时，如果是因为这个 Claude Code 是从另一个 Claude Code 的环境里启动的（继承了 CLAUDE_CODE_CHILD_SESSION），直接说明原因和解决办法（#147）",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.25/Tethera-0.25.ipa",
-          "size": 28640126,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -83,11 +84,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.29",
-      "versionDate": "2026-11-11T13:50:11Z",
-      "versionDescription": "## 新功能\n\n- 对话页底部的输入框、附图条、语音面板融为一体：附图条和语音面板出现时从输入框里「长出来」（#173）。\n- 会话列表顶部按钮统一成液态玻璃，电脑名胶囊也改成玻璃（#174）。\n- 状态提醒横幅、重连卡片、看大图页面的按钮和提示改成液态玻璃（#171、#172）。\n\n## 修复\n\n- 会话被提到顶部「进行中」后，它所在的空间不再从列表里消失，会留一行占位，点了跳到顶部；顶部卡片带上空间编号（#170）。\n- 会话列表顶栏的左右边距恢复成 20（#164）。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.29/Tethera-0.29.ipa",
-      "size": 28690289
+      "version": "0.30",
+      "versionDate": "2026-11-11T23:28:28Z",
+      "versionDescription": "## 新功能\n\n- 添加 SSH 电脑改成分步引导：先核对电脑指纹，再输一次登录密码，App 自动把钥匙加到电脑上，每一步都显示进度（#181）。\n- 切换模型不用再等：确认后面板马上关掉，在后台切换，期间发送按钮转圈，失败会在对话里提示「切换失败」（#188）。\n- 对话页选的图片和输入框合成一个气泡，图片显示在输入框里（#186）。\n- 对话正文改用 New York 衬线体，行距和段距放松，读起来更舒服（#187）。\n- 会话列表的用量在有多个 agent 时改成每个一个独立气泡，两列排列（#184）。\n\n## 修复\n\n- 会话列表右上角去掉重复的「加入工作区」按钮，只留列表底部那个（#182）。\n- 置顶的会话也算进它所属空间的会话数；空间只剩 1 个会话时也显示数量（#180）。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.30/Tethera-0.30.ipa",
+      "size": 28822489
     }
   ],
   "news": []
