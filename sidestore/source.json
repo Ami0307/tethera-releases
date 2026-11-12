@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.34",
+          "buildVersion": "676",
+          "date": "2026-11-12T14:05:51Z",
+          "localizedDescription": "- 首页左上角改成设备筛选：点一下可选「全部」或某一台电脑，只看那台的会话，App 会记住你的选择；电脑页面里重复的「设置」入口去掉了（#218）。\n- 新建会话时打开「允许 bypass」，Claude Code 一启动就是 bypass 模式，进对话页默认就选中 bypass，不用再切一圈（#220）。\n\n- 用默认模型开始的 Claude Code 会话，对话页也会显示并选中当前模型，不用先切换一次（#219）。\n- 经电脑接入的其他机器需要登录时，打开会话不再显示「找不到会话」，会说明是哪台机器、在电脑上运行什么命令登录（#221）。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.34/Tethera-0.34.ipa",
+          "size": 28965647,
+          "sha256": "f812158b708231f13592660036a6ccf0429c51c8c4204364966a6d1e302ef931",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.33",
           "buildVersion": "658",
           "date": "2026-11-12T04:39:01Z",
@@ -61,16 +71,6 @@
           "size": 28822489,
           "sha256": "57f88dea6706526a62dbebcaa604eefb044f4f2ec035ed07179fa9a8ef54cea0",
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.29",
-          "buildVersion": "597",
-          "date": "2026-11-11T13:50:11Z",
-          "localizedDescription": "## 新功能\n\n- 对话页底部的输入框、附图条、语音面板融为一体：附图条和语音面板出现时从输入框里「长出来」（#173）。\n- 会话列表顶部按钮统一成液态玻璃，电脑名胶囊也改成玻璃（#174）。\n- 状态提醒横幅、重连卡片、看大图页面的按钮和提示改成液态玻璃（#171、#172）。\n\n## 修复\n\n- 会话被提到顶部「进行中」后，它所在的空间不再从列表里消失，会留一行占位，点了跳到顶部；顶部卡片带上空间编号（#170）。\n- 会话列表顶栏的左右边距恢复成 20（#164）。",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.29/Tethera-0.29.ipa",
-          "size": 28690289,
-          "sha256": "17e330a7ecb2a77218895a671bf7d9a2ad892c50a6f1b84a6b5a305b8a44d1cf",
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -85,11 +85,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.33",
-      "versionDate": "2026-11-12T04:39:01Z",
-      "versionDescription": "## 新功能\n\n- 会话列表的会话树换了样式：子会话用细折线逐级缩进、每行带图标；会话里开的普通终端（比如看 GitHub CI 的）也挂在它下面（#208）。\n- 对话页输入框可以直接粘贴图片：长按「粘贴」或按 ⌘V，图片会加进附图（#206）。\n- 电脑详情里可以「经这台电脑连别的机器」：列出它 ~/.ssh/config 里的机器，点一下就让电脑上的 Herdr 连过去，那些机器的会话会出现在列表里（#214）。\n- App 生成的 SSH 钥匙改成这台手机一把、存在钥匙串里，重装 App 后不用再去电脑上装公钥（#210）。\n\n## 修复\n\n- 用 hc run 开的 Claude 子 agent 看不到对话时，提示说清楚了原因和开子 agent 的写法，不再让人「退出重开」（#205）。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.33/Tethera-0.33.ipa",
-      "size": 28946933
+      "version": "0.34",
+      "versionDate": "2026-11-12T14:05:51Z",
+      "versionDescription": "- 首页左上角改成设备筛选：点一下可选「全部」或某一台电脑，只看那台的会话，App 会记住你的选择；电脑页面里重复的「设置」入口去掉了（#218）。\n- 新建会话时打开「允许 bypass」，Claude Code 一启动就是 bypass 模式，进对话页默认就选中 bypass，不用再切一圈（#220）。\n\n- 用默认模型开始的 Claude Code 会话，对话页也会显示并选中当前模型，不用先切换一次（#219）。\n- 经电脑接入的其他机器需要登录时，打开会话不再显示「找不到会话」，会说明是哪台机器、在电脑上运行什么命令登录（#221）。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.34/Tethera-0.34.ipa",
+      "size": 28965647
     }
   ],
   "news": []
