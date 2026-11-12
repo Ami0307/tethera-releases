@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.35",
+          "buildVersion": "688",
+          "date": "2026-11-12T15:47:39Z",
+          "localizedDescription": "- Claude Code 在电脑上给出灰字的「预判下一句」时，手机对话页的输入框也会把它显示成灰色提示；点输入框旁的「上屏」按钮就填进来，可以改了再发（#217）。\n\n- Claude Code 输入框里只有预判句时，手机上切模型、看用量等面板不再提示「电脑上有没发出的字」而打不开（#217）。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.35/Tethera-0.35.ipa",
+          "size": 28988038,
+          "sha256": "6324e2d63df0477094074620e2144764326511264dcb5708ec78799706919ead",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.34",
           "buildVersion": "676",
           "date": "2026-11-12T14:05:51Z",
@@ -61,16 +71,6 @@
           "size": 28824333,
           "sha256": "942d88bba41e6b840ce2263d1296366350c608892d2bfabb1593e007790a11e8",
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.30",
-          "buildVersion": "621",
-          "date": "2026-11-11T23:28:28Z",
-          "localizedDescription": "## 新功能\n\n- 添加 SSH 电脑改成分步引导：先核对电脑指纹，再输一次登录密码，App 自动把钥匙加到电脑上，每一步都显示进度（#181）。\n- 切换模型不用再等：确认后面板马上关掉，在后台切换，期间发送按钮转圈，失败会在对话里提示「切换失败」（#188）。\n- 对话页选的图片和输入框合成一个气泡，图片显示在输入框里（#186）。\n- 对话正文改用 New York 衬线体，行距和段距放松，读起来更舒服（#187）。\n- 会话列表的用量在有多个 agent 时改成每个一个独立气泡，两列排列（#184）。\n\n## 修复\n\n- 会话列表右上角去掉重复的「加入工作区」按钮，只留列表底部那个（#182）。\n- 置顶的会话也算进它所属空间的会话数；空间只剩 1 个会话时也显示数量（#180）。",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.30/Tethera-0.30.ipa",
-          "size": 28822489,
-          "sha256": "57f88dea6706526a62dbebcaa604eefb044f4f2ec035ed07179fa9a8ef54cea0",
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -85,11 +85,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.34",
-      "versionDate": "2026-11-12T14:05:51Z",
-      "versionDescription": "- 首页左上角改成设备筛选：点一下可选「全部」或某一台电脑，只看那台的会话，App 会记住你的选择；电脑页面里重复的「设置」入口去掉了（#218）。\n- 新建会话时打开「允许 bypass」，Claude Code 一启动就是 bypass 模式，进对话页默认就选中 bypass，不用再切一圈（#220）。\n\n- 用默认模型开始的 Claude Code 会话，对话页也会显示并选中当前模型，不用先切换一次（#219）。\n- 经电脑接入的其他机器需要登录时，打开会话不再显示「找不到会话」，会说明是哪台机器、在电脑上运行什么命令登录（#221）。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.34/Tethera-0.34.ipa",
-      "size": 28965647
+      "version": "0.35",
+      "versionDate": "2026-11-12T15:47:39Z",
+      "versionDescription": "- Claude Code 在电脑上给出灰字的「预判下一句」时，手机对话页的输入框也会把它显示成灰色提示；点输入框旁的「上屏」按钮就填进来，可以改了再发（#217）。\n\n- Claude Code 输入框里只有预判句时，手机上切模型、看用量等面板不再提示「电脑上有没发出的字」而打不开（#217）。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.35/Tethera-0.35.ipa",
+      "size": 28988038
     }
   ],
   "news": []
