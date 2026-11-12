@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.33",
+          "buildVersion": "658",
+          "date": "2026-11-12T04:39:01Z",
+          "localizedDescription": "## 新功能\n\n- 会话列表的会话树换了样式：子会话用细折线逐级缩进、每行带图标；会话里开的普通终端（比如看 GitHub CI 的）也挂在它下面（#208）。\n- 对话页输入框可以直接粘贴图片：长按「粘贴」或按 ⌘V，图片会加进附图（#206）。\n- 电脑详情里可以「经这台电脑连别的机器」：列出它 ~/.ssh/config 里的机器，点一下就让电脑上的 Herdr 连过去，那些机器的会话会出现在列表里（#214）。\n- App 生成的 SSH 钥匙改成这台手机一把、存在钥匙串里，重装 App 后不用再去电脑上装公钥（#210）。\n\n## 修复\n\n- 用 hc run 开的 Claude 子 agent 看不到对话时，提示说清楚了原因和开子 agent 的写法，不再让人「退出重开」（#205）。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.33/Tethera-0.33.ipa",
+          "size": 28946933,
+          "sha256": "996bcf90550814a7e30334ba2d035046f6c93bcfcec0d91726035d129ffcb3c3",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.32",
           "buildVersion": "639",
           "date": "2026-11-12T03:38:20Z",
@@ -61,16 +71,6 @@
           "size": 28690289,
           "sha256": "17e330a7ecb2a77218895a671bf7d9a2ad892c50a6f1b84a6b5a305b8a44d1cf",
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.28",
-          "buildVersion": "581",
-          "date": "2026-11-11T12:12:52Z",
-          "localizedDescription": "## 新功能\n\n- 输入框「＋」菜单新增「添加文件」：从「文件」App 选任意文件（最大 20 MB）发给 agent，和图片一样先传到电脑上，消息里带路径（#163）。暂不支持 Windows 电脑。\n- 对话页模型按钮换成仪表盘图标，弧线显示当前思考强度（#162）。\n- 会话列表视觉调整：每个会话一个浅色块，字号字重更轻，要注意的会话才显示三行，分组标题「working」改为「进行中」（#164）。",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.28/Tethera-0.28.ipa",
-          "size": 28679241,
-          "sha256": "1afc8f49f9420e7891998089fc081349e1861e7268a5ac40830e7031e0dc966e",
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -85,11 +85,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.32",
-      "versionDate": "2026-11-12T03:38:20Z",
-      "versionDescription": "## 新功能\n\n- 打开 App 连接电脑时，「正在连接」上方多了一段动画：手机和电脑之间的小点依次亮起；连不上时变成静止的灰色，开了「减弱动态效果」时不动（#203）。\n- 已经添加过的电脑，在电脑详情里加 SSH 直连时，也能走分步引导：核对指纹、输一次登录密码自动装公钥；已配过 SSH 的电脑可以「用密码重新装公钥」（#201）。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.32/Tethera-0.32.ipa",
-      "size": 28846617
+      "version": "0.33",
+      "versionDate": "2026-11-12T04:39:01Z",
+      "versionDescription": "## 新功能\n\n- 会话列表的会话树换了样式：子会话用细折线逐级缩进、每行带图标；会话里开的普通终端（比如看 GitHub CI 的）也挂在它下面（#208）。\n- 对话页输入框可以直接粘贴图片：长按「粘贴」或按 ⌘V，图片会加进附图（#206）。\n- 电脑详情里可以「经这台电脑连别的机器」：列出它 ~/.ssh/config 里的机器，点一下就让电脑上的 Herdr 连过去，那些机器的会话会出现在列表里（#214）。\n- App 生成的 SSH 钥匙改成这台手机一把、存在钥匙串里，重装 App 后不用再去电脑上装公钥（#210）。\n\n## 修复\n\n- 用 hc run 开的 Claude 子 agent 看不到对话时，提示说清楚了原因和开子 agent 的写法，不再让人「退出重开」（#205）。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.33/Tethera-0.33.ipa",
+      "size": 28946933
     }
   ],
   "news": []
