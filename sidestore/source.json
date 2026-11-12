@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.31",
+          "buildVersion": "629",
+          "date": "2026-11-12T02:46:12Z",
+          "localizedDescription": "## 新功能\n\n- 在手机上新建 Claude Code 会话时，可以打开「允许 bypass」：会话启动时带上 `--allow-dangerously-skip-permissions`，之后在 Shift+Tab 或对话页的模式切换里就能切到 bypass。默认关，打开时会醒目标出风险（#197）。\n\n## 修复\n\n- 权限模式里 bypass 锁住时的提示写清楚了：直接用 `claude` 启动的会话没有 bypass，要用允许 bypass 的参数启动，或在 Claude Code 设置里把默认模式设为 bypassPermissions（#196）。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.31/Tethera-0.31.ipa",
+          "size": 28824333,
+          "sha256": "942d88bba41e6b840ce2263d1296366350c608892d2bfabb1593e007790a11e8",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.30",
           "buildVersion": "621",
           "date": "2026-11-11T23:28:28Z",
@@ -61,15 +71,6 @@
           "size": 28650585,
           "sha256": "633d33126c980e307b86b26e546a12afe94555dfff1a235031567818e5acf910",
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.26",
-          "buildVersion": "555",
-          "date": "2026-11-11T09:55:24Z",
-          "localizedDescription": "## 修复\n- 点进带操作卡片（等你确认、在问你）的会话时，对话内容被滚到屏幕外、卡片上方整片空白，要滑一下才恢复（#154）",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.26/Tethera-0.26.ipa",
-          "size": 28641941,
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -84,11 +85,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.30",
-      "versionDate": "2026-11-11T23:28:28Z",
-      "versionDescription": "## 新功能\n\n- 添加 SSH 电脑改成分步引导：先核对电脑指纹，再输一次登录密码，App 自动把钥匙加到电脑上，每一步都显示进度（#181）。\n- 切换模型不用再等：确认后面板马上关掉，在后台切换，期间发送按钮转圈，失败会在对话里提示「切换失败」（#188）。\n- 对话页选的图片和输入框合成一个气泡，图片显示在输入框里（#186）。\n- 对话正文改用 New York 衬线体，行距和段距放松，读起来更舒服（#187）。\n- 会话列表的用量在有多个 agent 时改成每个一个独立气泡，两列排列（#184）。\n\n## 修复\n\n- 会话列表右上角去掉重复的「加入工作区」按钮，只留列表底部那个（#182）。\n- 置顶的会话也算进它所属空间的会话数；空间只剩 1 个会话时也显示数量（#180）。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.30/Tethera-0.30.ipa",
-      "size": 28822489
+      "version": "0.31",
+      "versionDate": "2026-11-12T02:46:12Z",
+      "versionDescription": "## 新功能\n\n- 在手机上新建 Claude Code 会话时，可以打开「允许 bypass」：会话启动时带上 `--allow-dangerously-skip-permissions`，之后在 Shift+Tab 或对话页的模式切换里就能切到 bypass。默认关，打开时会醒目标出风险（#197）。\n\n## 修复\n\n- 权限模式里 bypass 锁住时的提示写清楚了：直接用 `claude` 启动的会话没有 bypass，要用允许 bypass 的参数启动，或在 Claude Code 设置里把默认模式设为 bypassPermissions（#196）。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.31/Tethera-0.31.ipa",
+      "size": 28824333
     }
   ],
   "news": []
