@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.36",
+          "buildVersion": "705",
+          "date": "2026-11-14T03:56:08Z",
+          "localizedDescription": "- 灵动岛和锁屏能看 agent 的进度了：进度环里橙色是等你的、蓝色是在干活的，全绿打勾就是都干完了；展开后列出最急的 3 个会话。App 在前台时实时更新，进后台后只能再更新一小会儿，断开后显示「已断开 · 最后更新 X 分钟前」。可在「设置 › 提醒 › 灵动岛显示进度」关掉（#230）。\n- 首页的用量气泡点哪个就只看哪个 agent 的用量，不再把所有 agent 的混在一起（#231）。\n- 查 Codex 用量、取 Codex / Claude Code / Pi 的模型列表时，先直接问 agent 的命令行程序，不用再在电脑终端里弹出 /status、/model 面板；问不到时照旧读面板（#232；连接器 0.1.6 最好用，SSH 和旧连接器在 macOS / Linux 上也能用，Windows 上的旧连接器照旧读面板）。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.36/Tethera-0.36.ipa",
+          "size": 29072640,
+          "sha256": "3a581dc918efbc74d531840e58e9beb6a77742097fa1a2a0ea13aa1f23db5ae6",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.35",
           "buildVersion": "688",
           "date": "2026-11-12T15:47:39Z",
@@ -61,16 +71,6 @@
           "size": 28846617,
           "sha256": "22df8d1380464fbb4fe5351c9463d7ef45a82ef404eb2ca172bf3d44ee9a0afb",
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.31",
-          "buildVersion": "629",
-          "date": "2026-11-12T02:46:12Z",
-          "localizedDescription": "## 新功能\n\n- 在手机上新建 Claude Code 会话时，可以打开「允许 bypass」：会话启动时带上 `--allow-dangerously-skip-permissions`，之后在 Shift+Tab 或对话页的模式切换里就能切到 bypass。默认关，打开时会醒目标出风险（#197）。\n\n## 修复\n\n- 权限模式里 bypass 锁住时的提示写清楚了：直接用 `claude` 启动的会话没有 bypass，要用允许 bypass 的参数启动，或在 Claude Code 设置里把默认模式设为 bypassPermissions（#196）。",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.31/Tethera-0.31.ipa",
-          "size": 28824333,
-          "sha256": "942d88bba41e6b840ce2263d1296366350c608892d2bfabb1593e007790a11e8",
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -85,11 +85,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.35",
-      "versionDate": "2026-11-12T15:47:39Z",
-      "versionDescription": "- Claude Code 在电脑上给出灰字的「预判下一句」时，手机对话页的输入框也会把它显示成灰色提示；点输入框旁的「上屏」按钮就填进来，可以改了再发（#217）。\n\n- Claude Code 输入框里只有预判句时，手机上切模型、看用量等面板不再提示「电脑上有没发出的字」而打不开（#217）。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.35/Tethera-0.35.ipa",
-      "size": 28988038
+      "version": "0.36",
+      "versionDate": "2026-11-14T03:56:08Z",
+      "versionDescription": "- 灵动岛和锁屏能看 agent 的进度了：进度环里橙色是等你的、蓝色是在干活的，全绿打勾就是都干完了；展开后列出最急的 3 个会话。App 在前台时实时更新，进后台后只能再更新一小会儿，断开后显示「已断开 · 最后更新 X 分钟前」。可在「设置 › 提醒 › 灵动岛显示进度」关掉（#230）。\n- 首页的用量气泡点哪个就只看哪个 agent 的用量，不再把所有 agent 的混在一起（#231）。\n- 查 Codex 用量、取 Codex / Claude Code / Pi 的模型列表时，先直接问 agent 的命令行程序，不用再在电脑终端里弹出 /status、/model 面板；问不到时照旧读面板（#232；连接器 0.1.6 最好用，SSH 和旧连接器在 macOS / Linux 上也能用，Windows 上的旧连接器照旧读面板）。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.36/Tethera-0.36.ipa",
+      "size": 29072640
     }
   ],
   "news": []
