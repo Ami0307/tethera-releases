@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.37",
+          "buildVersion": "730",
+          "date": "2026-11-14T07:23:31Z",
+          "localizedDescription": "新功能\n- 新增「用量」桌面小组件：每个 agent 两根进度条（5 小时额度、本周额度），写着已用多少、什么时候重置；小号显示最紧的那个，中号并排显示 Claude Code 和 Codex。数值是 App 上次查到的，太旧会变灰，点一下打开用量页（#248）。\n- 新增「Token 用量」页（「用量」页底部进入）：今天 / 本周 / 本月用了多少 token，按 agent 和模型拆开，附估算费用和近 20 周的热力图。数据在电脑上按记录文件汇总，不需要 API key；Windows 电脑暂不支持（#251）。\n- 设置页重新整理成「显示 / 通知 / 会话 / 其他」四组，说明文字更短，去掉了「电脑与连接」（#238）。\n- 灵动岛左边改成 agent 的图标，进度变化有动画；有新的会话等你时会展开提示一次（#240）。\n\n修复\n- 灵动岛右边的进度环不再被前置摄像头挡住（#240）。\n- 「等你的 agent」小组件之前一直收不到数据，现在会跟着会话状态更新（#246）。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.37/Tethera-0.37.ipa",
+          "size": 29305085,
+          "sha256": "bacea3a71069fa17d8aa6dd50b440a7e7be04599b3d2212b354e553bea38d54d",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.36",
           "buildVersion": "705",
           "date": "2026-11-14T03:56:08Z",
@@ -61,16 +71,6 @@
           "size": 28946933,
           "sha256": "996bcf90550814a7e30334ba2d035046f6c93bcfcec0d91726035d129ffcb3c3",
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.32",
-          "buildVersion": "639",
-          "date": "2026-11-12T03:38:20Z",
-          "localizedDescription": "## 新功能\n\n- 打开 App 连接电脑时，「正在连接」上方多了一段动画：手机和电脑之间的小点依次亮起；连不上时变成静止的灰色，开了「减弱动态效果」时不动（#203）。\n- 已经添加过的电脑，在电脑详情里加 SSH 直连时，也能走分步引导：核对指纹、输一次登录密码自动装公钥；已配过 SSH 的电脑可以「用密码重新装公钥」（#201）。",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.32/Tethera-0.32.ipa",
-          "size": 28846617,
-          "sha256": "22df8d1380464fbb4fe5351c9463d7ef45a82ef404eb2ca172bf3d44ee9a0afb",
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -85,11 +85,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.36",
-      "versionDate": "2026-11-14T03:56:08Z",
-      "versionDescription": "- 灵动岛和锁屏能看 agent 的进度了：进度环里橙色是等你的、蓝色是在干活的，全绿打勾就是都干完了；展开后列出最急的 3 个会话。App 在前台时实时更新，进后台后只能再更新一小会儿，断开后显示「已断开 · 最后更新 X 分钟前」。可在「设置 › 提醒 › 灵动岛显示进度」关掉（#230）。\n- 首页的用量气泡点哪个就只看哪个 agent 的用量，不再把所有 agent 的混在一起（#231）。\n- 查 Codex 用量、取 Codex / Claude Code / Pi 的模型列表时，先直接问 agent 的命令行程序，不用再在电脑终端里弹出 /status、/model 面板；问不到时照旧读面板（#232；连接器 0.1.6 最好用，SSH 和旧连接器在 macOS / Linux 上也能用，Windows 上的旧连接器照旧读面板）。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.36/Tethera-0.36.ipa",
-      "size": 29072640
+      "version": "0.37",
+      "versionDate": "2026-11-14T07:23:31Z",
+      "versionDescription": "新功能\n- 新增「用量」桌面小组件：每个 agent 两根进度条（5 小时额度、本周额度），写着已用多少、什么时候重置；小号显示最紧的那个，中号并排显示 Claude Code 和 Codex。数值是 App 上次查到的，太旧会变灰，点一下打开用量页（#248）。\n- 新增「Token 用量」页（「用量」页底部进入）：今天 / 本周 / 本月用了多少 token，按 agent 和模型拆开，附估算费用和近 20 周的热力图。数据在电脑上按记录文件汇总，不需要 API key；Windows 电脑暂不支持（#251）。\n- 设置页重新整理成「显示 / 通知 / 会话 / 其他」四组，说明文字更短，去掉了「电脑与连接」（#238）。\n- 灵动岛左边改成 agent 的图标，进度变化有动画；有新的会话等你时会展开提示一次（#240）。\n\n修复\n- 灵动岛右边的进度环不再被前置摄像头挡住（#240）。\n- 「等你的 agent」小组件之前一直收不到数据，现在会跟着会话状态更新（#246）。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.37/Tethera-0.37.ipa",
+      "size": 29305085
     }
   ],
   "news": []
