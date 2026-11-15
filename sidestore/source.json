@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.39",
+          "buildVersion": "807",
+          "date": "2026-11-15T10:46:09Z",
+          "localizedDescription": "新功能\n- 新增「今日用量」小组件（中号）：今天的 Token 合计、估算花费，以及按 agent 分开的用量（#280）。\n- 新增「Token 活跃度」小组件（小 / 中 / 大）：按周排列的活跃热力格、连续活跃天数和活跃天数；编辑小组件可选「全部电脑」或某一台，点小组件直接打开 Token 用量页并选好那台电脑（#280）。\n\n修复\n- 电脑连不上时顶部的提示卡改成像通知一样浮在页面上，不再把顶栏往下推；上滑一定能收起，收起后在同一种状态下不再弹出，连上或重新回到 App 后才会再出现（#279）。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.39/Tethera-0.39.ipa",
+          "size": 30839658,
+          "sha256": "27d2b5f18d0a222ac73d2e98fb33c85e148a2f0e944586eaccae24a021eed98f",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.38",
           "buildVersion": "787",
           "date": "2026-11-15T08:21:44Z",
@@ -61,16 +71,6 @@
           "size": 28988038,
           "sha256": "6324e2d63df0477094074620e2144764326511264dcb5708ec78799706919ead",
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.34",
-          "buildVersion": "676",
-          "date": "2026-11-12T14:05:51Z",
-          "localizedDescription": "- 首页左上角改成设备筛选：点一下可选「全部」或某一台电脑，只看那台的会话，App 会记住你的选择；电脑页面里重复的「设置」入口去掉了（#218）。\n- 新建会话时打开「允许 bypass」，Claude Code 一启动就是 bypass 模式，进对话页默认就选中 bypass，不用再切一圈（#220）。\n\n- 用默认模型开始的 Claude Code 会话，对话页也会显示并选中当前模型，不用先切换一次（#219）。\n- 经电脑接入的其他机器需要登录时，打开会话不再显示「找不到会话」，会说明是哪台机器、在电脑上运行什么命令登录（#221）。",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.34/Tethera-0.34.ipa",
-          "size": 28965647,
-          "sha256": "f812158b708231f13592660036a6ccf0429c51c8c4204364966a6d1e302ef931",
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -85,11 +85,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.38",
-      "versionDate": "2026-11-15T08:21:44Z",
-      "versionDescription": "新功能\n- 「用量」小组件换了新样式：每段是大号百分比 + 刻度条 + 重置倒计时；新增大号；同一个 agent 在两台电脑上分开显示（#267）。\n- 用量自动刷新：设置 › 显示 › 用量自动刷新，可选关 / 5 / 15 / 30 分钟（默认 15 分钟）；前台按间隔拉取，放了用量小组件时后台也会安排刷新；过了重置时间小组件显示 0%，不再显示旧百分比（#268）。\n- 设置新增「样式」，目前只有 Claude，给以后的其他样式留位置（#273）。\n\n改进\n- 点开的聊天优先读取，同一台电脑的进程信息短时间内共用，多个会话一起刷新时更快（#257）。\n- 向上加载更早的对话时复用已经处理过的内容，长会话翻历史更省（#258）。\n- 首选连接方式刚连不上时，下次只等 3 秒就切备用方式（原来 8 秒）（#260）。\n- 模型列表、用量查询不再挡住同一台电脑上的聊天记录加载（#254）。\n- Token 用量统计只读新增的部分，离开页面后停止（#263）。\n\n修复\n- 查找很长的会话记录时不再触发 64 MB 限制（#255）。\n- 聊天读取不再积存界面用不到的旧更新（#256）。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.38/Tethera-0.38.ipa",
-      "size": 29435847
+      "version": "0.39",
+      "versionDate": "2026-11-15T10:46:09Z",
+      "versionDescription": "新功能\n- 新增「今日用量」小组件（中号）：今天的 Token 合计、估算花费，以及按 agent 分开的用量（#280）。\n- 新增「Token 活跃度」小组件（小 / 中 / 大）：按周排列的活跃热力格、连续活跃天数和活跃天数；编辑小组件可选「全部电脑」或某一台，点小组件直接打开 Token 用量页并选好那台电脑（#280）。\n\n修复\n- 电脑连不上时顶部的提示卡改成像通知一样浮在页面上，不再把顶栏往下推；上滑一定能收起，收起后在同一种状态下不再弹出，连上或重新回到 App 后才会再出现（#279）。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.39/Tethera-0.39.ipa",
+      "size": 30839658
     }
   ],
   "news": []
