@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.40",
+          "buildVersion": "842",
+          "date": "2026-11-16T07:04:24Z",
+          "localizedDescription": "新功能\n- 设置 › 样式新增「ChatGPT」和「Grok」两种样式（#283、#285）。\n- 电脑详情新增「网络诊断」：逐项检查手机网络、本地网络权限、中转、两边 NAT 类型、逐个直连地址试连、当前连接路径和 SSH 端口，给出结论和可以直接点的操作，还能复制一份可打码的文字报告（#292）。\n- Token 用量的费用估算改用 models.dev 的公开价目，Codex、Pi 用的模型也能算费用，价格更新不用等发版；拉不到时用上次的价格或内置价目（#291）。\n\n修复\n- 发送失败、连不上电脑等错误提示改成中文说明，不再显示「LinkFailure(…)」之类的原始错误和类型名（#288）。\n- 连接器不再把代理软件虚拟网卡的地址（198.18.x.x）当成直连地址公布，扫码直连不会再去试这个连不上的地址（#289）。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.40/Tethera-0.40.ipa",
+          "size": 31030547,
+          "sha256": "5106660d9417558c1548fa6a49ef0e75f1d27fac0b7b070f20c4247ebe278584",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.39",
           "buildVersion": "807",
           "date": "2026-11-15T10:46:09Z",
@@ -61,16 +71,6 @@
           "size": 29072640,
           "sha256": "3a581dc918efbc74d531840e58e9beb6a77742097fa1a2a0ea13aa1f23db5ae6",
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.35",
-          "buildVersion": "688",
-          "date": "2026-11-12T15:47:39Z",
-          "localizedDescription": "- Claude Code 在电脑上给出灰字的「预判下一句」时，手机对话页的输入框也会把它显示成灰色提示；点输入框旁的「上屏」按钮就填进来，可以改了再发（#217）。\n\n- Claude Code 输入框里只有预判句时，手机上切模型、看用量等面板不再提示「电脑上有没发出的字」而打不开（#217）。",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.35/Tethera-0.35.ipa",
-          "size": 28988038,
-          "sha256": "6324e2d63df0477094074620e2144764326511264dcb5708ec78799706919ead",
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -85,11 +85,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.39",
-      "versionDate": "2026-11-15T10:46:09Z",
-      "versionDescription": "新功能\n- 新增「今日用量」小组件（中号）：今天的 Token 合计、估算花费，以及按 agent 分开的用量（#280）。\n- 新增「Token 活跃度」小组件（小 / 中 / 大）：按周排列的活跃热力格、连续活跃天数和活跃天数；编辑小组件可选「全部电脑」或某一台，点小组件直接打开 Token 用量页并选好那台电脑（#280）。\n\n修复\n- 电脑连不上时顶部的提示卡改成像通知一样浮在页面上，不再把顶栏往下推；上滑一定能收起，收起后在同一种状态下不再弹出，连上或重新回到 App 后才会再出现（#279）。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.39/Tethera-0.39.ipa",
-      "size": 30839658
+      "version": "0.40",
+      "versionDate": "2026-11-16T07:04:24Z",
+      "versionDescription": "新功能\n- 设置 › 样式新增「ChatGPT」和「Grok」两种样式（#283、#285）。\n- 电脑详情新增「网络诊断」：逐项检查手机网络、本地网络权限、中转、两边 NAT 类型、逐个直连地址试连、当前连接路径和 SSH 端口，给出结论和可以直接点的操作，还能复制一份可打码的文字报告（#292）。\n- Token 用量的费用估算改用 models.dev 的公开价目，Codex、Pi 用的模型也能算费用，价格更新不用等发版；拉不到时用上次的价格或内置价目（#291）。\n\n修复\n- 发送失败、连不上电脑等错误提示改成中文说明，不再显示「LinkFailure(…)」之类的原始错误和类型名（#288）。\n- 连接器不再把代理软件虚拟网卡的地址（198.18.x.x）当成直连地址公布，扫码直连不会再去试这个连不上的地址（#289）。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.40/Tethera-0.40.ipa",
+      "size": 31030547
     }
   ],
   "news": []
