@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.42",
+          "buildVersion": "871",
+          "date": "2026-11-17T07:09:20Z",
+          "localizedDescription": "新功能\n- 主页新增「最近会话」分组（默认关闭，可在「设置 › 会话」中开启并设置显示条数 1–20，默认 5 条）：按最近点开时间列出各电脑各空间的会话，支持左滑或长按从最近会话移除，不搬走原分组中的会话（#299）。\n- ChatGPT 样式升级为整体风格：调整会话列表与对话页的字号、间距、气泡与面板排布（#303）。\n- 连接器默认中转地址由 iroh 公共节点（`n0`）改为自建节点 `https://derp-hs.borry.org/`（新装或未指定 relay 时生效；已有 `n0` 配置保持不变，可用 `tethera config set relay tethera` 切换）。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.42/Tethera-0.42.ipa",
+          "size": 31122563,
+          "sha256": "4b28b46fdca2a54d8445b74fbfa2bd4b607bc7f1ba54273d38651cf7c99e1bf8",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.41",
           "buildVersion": "857",
           "date": "2026-11-17T06:41:33Z",
@@ -61,16 +71,6 @@
           "size": 29435847,
           "sha256": "c7358258a64ab5ca80f0c2cfa4106712ce5b91b0e2459d42ae326d14c921dff3",
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.37",
-          "buildVersion": "730",
-          "date": "2026-11-14T07:23:31Z",
-          "localizedDescription": "新功能\n- 新增「用量」桌面小组件：每个 agent 两根进度条（5 小时额度、本周额度），写着已用多少、什么时候重置；小号显示最紧的那个，中号并排显示 Claude Code 和 Codex。数值是 App 上次查到的，太旧会变灰，点一下打开用量页（#248）。\n- 新增「Token 用量」页（「用量」页底部进入）：今天 / 本周 / 本月用了多少 token，按 agent 和模型拆开，附估算费用和近 20 周的热力图。数据在电脑上按记录文件汇总，不需要 API key；Windows 电脑暂不支持（#251）。\n- 设置页重新整理成「显示 / 通知 / 会话 / 其他」四组，说明文字更短，去掉了「电脑与连接」（#238）。\n- 灵动岛左边改成 agent 的图标，进度变化有动画；有新的会话等你时会展开提示一次（#240）。\n\n修复\n- 灵动岛右边的进度环不再被前置摄像头挡住（#240）。\n- 「等你的 agent」小组件之前一直收不到数据，现在会跟着会话状态更新（#246）。",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.37/Tethera-0.37.ipa",
-          "size": 29305085,
-          "sha256": "bacea3a71069fa17d8aa6dd50b440a7e7be04599b3d2212b354e553bea38d54d",
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -85,11 +85,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.41",
-      "versionDate": "2026-11-17T06:41:33Z",
-      "versionDescription": "新功能\n- 电脑连接方式重做为三种并列：「扫码 · 中转」（先直连/打洞，不通再走中转）、「连接器直连」（只拨用户填的域名或 IP 与端口，适合 Tailscale / 公网 IP / 端口映射，不走中转也不打洞）、「SSH 直连」（#290）。\n- 电脑详情页为「连接器直连」提供直接可见的「连接地址」入口，并附上手机开 Surge / Clash 等代理软件时将局域网网段、Tailscale `100.64.0.0/10` 与 UDP 47011 设为 DIRECT 的说明（#290）。\n- 已连接状态下调整连接方式顺序不会断开当前工作连接，改动在下次重连时生效；修改「连接器直连」地址则会立即按新地址重连（#290）。\n\n修复\n- 原「扫码 · 直连」配置自动迁移为「连接器直连」，未手动填过地址时保留二维码里的直连地址（#290）。\n- 连接器仅在 `100.64.0.0/10` 地址确实存在于本机网卡时才按 Tailscale 优先排序，运营商 CGNAT 出口按公网地址处理（#290）。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.41/Tethera-0.41.ipa",
-      "size": 31048170
+      "version": "0.42",
+      "versionDate": "2026-11-17T07:09:20Z",
+      "versionDescription": "新功能\n- 主页新增「最近会话」分组（默认关闭，可在「设置 › 会话」中开启并设置显示条数 1–20，默认 5 条）：按最近点开时间列出各电脑各空间的会话，支持左滑或长按从最近会话移除，不搬走原分组中的会话（#299）。\n- ChatGPT 样式升级为整体风格：调整会话列表与对话页的字号、间距、气泡与面板排布（#303）。\n- 连接器默认中转地址由 iroh 公共节点（`n0`）改为自建节点 `https://derp-hs.borry.org/`（新装或未指定 relay 时生效；已有 `n0` 配置保持不变，可用 `tethera config set relay tethera` 切换）。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.42/Tethera-0.42.ipa",
+      "size": 31122563
     }
   ],
   "news": []
