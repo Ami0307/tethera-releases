@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.45",
+          "buildVersion": "903",
+          "date": "2026-11-17T10:57:50Z",
+          "localizedDescription": "新功能\n- 诊断模式升级（v2）：按 10 秒窗口分页面、分滑动中 / 静止统计刷新率范围、掉帧与卡顿比（ms/s），主线程卡顿阈值收紧至 100 ms，并记录热点视图重绘与数据更新频率（#323）。\n- 设置 › 诊断模式新增「显示实时帧率」左上角浮层与「已记录 X 分钟」提示，导出报告新增「== 按页面 ==」性能摘要（#323）。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.45/Tethera-0.45.ipa",
+          "size": 31309019,
+          "sha256": "d66ab9ff96afe101919c8d611cd3ea94ba99dded47e03cbb87327a931a999b9a",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.44",
           "buildVersion": "898",
           "date": "2026-11-17T09:37:26Z",
@@ -61,16 +71,6 @@
           "size": 31048170,
           "sha256": "423485a2df17e7431095d7a3dbb75d099519dfc183c46f3c6dab3929a6c3ee08",
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.40",
-          "buildVersion": "842",
-          "date": "2026-11-16T07:04:24Z",
-          "localizedDescription": "新功能\n- 设置 › 样式新增「ChatGPT」和「Grok」两种样式（#283、#285）。\n- 电脑详情新增「网络诊断」：逐项检查手机网络、本地网络权限、中转、两边 NAT 类型、逐个直连地址试连、当前连接路径和 SSH 端口，给出结论和可以直接点的操作，还能复制一份可打码的文字报告（#292）。\n- Token 用量的费用估算改用 models.dev 的公开价目，Codex、Pi 用的模型也能算费用，价格更新不用等发版；拉不到时用上次的价格或内置价目（#291）。\n\n修复\n- 发送失败、连不上电脑等错误提示改成中文说明，不再显示「LinkFailure(…)」之类的原始错误和类型名（#288）。\n- 连接器不再把代理软件虚拟网卡的地址（198.18.x.x）当成直连地址公布，扫码直连不会再去试这个连不上的地址（#289）。",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.40/Tethera-0.40.ipa",
-          "size": 31030547,
-          "sha256": "5106660d9417558c1548fa6a49ef0e75f1d27fac0b7b070f20c4247ebe278584",
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -85,11 +85,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.44",
-      "versionDate": "2026-11-17T09:37:26Z",
-      "versionDescription": "新功能\n- 开启 ProMotion 120Hz 高刷显示，列表里的循环小动画保持 30 帧以兼顾功耗与流畅度（#317）。\n- 连接方式改版为两类 + 线路：添加电脑与电脑详情先选「连接器（扫码配对）」或「SSH」，连接器类型下可勾选「Tethera 线路」「自定义线路」「SSH 兜底」，状态文字按实际走的路径显示，支持两类间切换并保留配对（#318）。\n- 设置 › 其他新增「诊断模式」：本地记录连接与路径变化、重连耗时、控制请求耗时、主线程卡顿与前台帧率，支持导出打码纯文本报告（在线 0.1.13 以上连接器自动附带末尾日志）与清空记录（#320）。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.44/Tethera-0.44.ipa",
-      "size": 31261820
+      "version": "0.45",
+      "versionDate": "2026-11-17T10:57:50Z",
+      "versionDescription": "新功能\n- 诊断模式升级（v2）：按 10 秒窗口分页面、分滑动中 / 静止统计刷新率范围、掉帧与卡顿比（ms/s），主线程卡顿阈值收紧至 100 ms，并记录热点视图重绘与数据更新频率（#323）。\n- 设置 › 诊断模式新增「显示实时帧率」左上角浮层与「已记录 X 分钟」提示，导出报告新增「== 按页面 ==」性能摘要（#323）。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.45/Tethera-0.45.ipa",
+      "size": 31309019
     }
   ],
   "news": []
