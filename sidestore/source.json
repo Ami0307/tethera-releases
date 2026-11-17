@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.43",
+          "buildVersion": "877",
+          "date": "2026-11-17T07:53:55Z",
+          "localizedDescription": "新功能\n- 电脑列表与电脑详情新增连接器更新提醒：支持自我更新的连接器可在电脑详情一键「立即更新」，0.1.11 之前的老连接器提示一次性手动更新命令并支持拷贝。\n- 手机连接旧公共中转（`n0`）配对记录时同时尝试自建中转 `derp-hs.borry.org`，连接成功后自动在后台同步配对记录的中转地址与连接器版本信息，老用户升级后无需重新扫码。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.43/Tethera-0.43.ipa",
+          "size": 31164852,
+          "sha256": "226ce1badd67e1b49e170fa87382e97024dcadb3e3d5dc8c2422fb331d301424",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.42",
           "buildVersion": "871",
           "date": "2026-11-17T07:09:20Z",
@@ -61,16 +71,6 @@
           "size": 30839658,
           "sha256": "27d2b5f18d0a222ac73d2e98fb33c85e148a2f0e944586eaccae24a021eed98f",
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.38",
-          "buildVersion": "787",
-          "date": "2026-11-15T08:21:44Z",
-          "localizedDescription": "新功能\n- 「用量」小组件换了新样式：每段是大号百分比 + 刻度条 + 重置倒计时；新增大号；同一个 agent 在两台电脑上分开显示（#267）。\n- 用量自动刷新：设置 › 显示 › 用量自动刷新，可选关 / 5 / 15 / 30 分钟（默认 15 分钟）；前台按间隔拉取，放了用量小组件时后台也会安排刷新；过了重置时间小组件显示 0%，不再显示旧百分比（#268）。\n- 设置新增「样式」，目前只有 Claude，给以后的其他样式留位置（#273）。\n\n改进\n- 点开的聊天优先读取，同一台电脑的进程信息短时间内共用，多个会话一起刷新时更快（#257）。\n- 向上加载更早的对话时复用已经处理过的内容，长会话翻历史更省（#258）。\n- 首选连接方式刚连不上时，下次只等 3 秒就切备用方式（原来 8 秒）（#260）。\n- 模型列表、用量查询不再挡住同一台电脑上的聊天记录加载（#254）。\n- Token 用量统计只读新增的部分，离开页面后停止（#263）。\n\n修复\n- 查找很长的会话记录时不再触发 64 MB 限制（#255）。\n- 聊天读取不再积存界面用不到的旧更新（#256）。",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.38/Tethera-0.38.ipa",
-          "size": 29435847,
-          "sha256": "c7358258a64ab5ca80f0c2cfa4106712ce5b91b0e2459d42ae326d14c921dff3",
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -85,11 +85,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.42",
-      "versionDate": "2026-11-17T07:09:20Z",
-      "versionDescription": "新功能\n- 主页新增「最近会话」分组（默认关闭，可在「设置 › 会话」中开启并设置显示条数 1–20，默认 5 条）：按最近点开时间列出各电脑各空间的会话，支持左滑或长按从最近会话移除，不搬走原分组中的会话（#299）。\n- ChatGPT 样式升级为整体风格：调整会话列表与对话页的字号、间距、气泡与面板排布（#303）。\n- 连接器默认中转地址由 iroh 公共节点（`n0`）改为自建节点 `https://derp-hs.borry.org/`（新装或未指定 relay 时生效；已有 `n0` 配置保持不变，可用 `tethera config set relay tethera` 切换）。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.42/Tethera-0.42.ipa",
-      "size": 31122563
+      "version": "0.43",
+      "versionDate": "2026-11-17T07:53:55Z",
+      "versionDescription": "新功能\n- 电脑列表与电脑详情新增连接器更新提醒：支持自我更新的连接器可在电脑详情一键「立即更新」，0.1.11 之前的老连接器提示一次性手动更新命令并支持拷贝。\n- 手机连接旧公共中转（`n0`）配对记录时同时尝试自建中转 `derp-hs.borry.org`，连接成功后自动在后台同步配对记录的中转地址与连接器版本信息，老用户升级后无需重新扫码。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.43/Tethera-0.43.ipa",
+      "size": 31164852
     }
   ],
   "news": []
