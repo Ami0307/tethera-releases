@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.44",
+          "buildVersion": "898",
+          "date": "2026-11-17T09:37:26Z",
+          "localizedDescription": "新功能\n- 开启 ProMotion 120Hz 高刷显示，列表里的循环小动画保持 30 帧以兼顾功耗与流畅度（#317）。\n- 连接方式改版为两类 + 线路：添加电脑与电脑详情先选「连接器（扫码配对）」或「SSH」，连接器类型下可勾选「Tethera 线路」「自定义线路」「SSH 兜底」，状态文字按实际走的路径显示，支持两类间切换并保留配对（#318）。\n- 设置 › 其他新增「诊断模式」：本地记录连接与路径变化、重连耗时、控制请求耗时、主线程卡顿与前台帧率，支持导出打码纯文本报告（在线 0.1.13 以上连接器自动附带末尾日志）与清空记录（#320）。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.44/Tethera-0.44.ipa",
+          "size": 31261820,
+          "sha256": "8e6c209e4acbc70298c340f966976447c9012425fd863a364242250a152b7bcd",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.43",
           "buildVersion": "877",
           "date": "2026-11-17T07:53:55Z",
@@ -61,16 +71,6 @@
           "size": 31030547,
           "sha256": "5106660d9417558c1548fa6a49ef0e75f1d27fac0b7b070f20c4247ebe278584",
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.39",
-          "buildVersion": "807",
-          "date": "2026-11-15T10:46:09Z",
-          "localizedDescription": "新功能\n- 新增「今日用量」小组件（中号）：今天的 Token 合计、估算花费，以及按 agent 分开的用量（#280）。\n- 新增「Token 活跃度」小组件（小 / 中 / 大）：按周排列的活跃热力格、连续活跃天数和活跃天数；编辑小组件可选「全部电脑」或某一台，点小组件直接打开 Token 用量页并选好那台电脑（#280）。\n\n修复\n- 电脑连不上时顶部的提示卡改成像通知一样浮在页面上，不再把顶栏往下推；上滑一定能收起，收起后在同一种状态下不再弹出，连上或重新回到 App 后才会再出现（#279）。",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.39/Tethera-0.39.ipa",
-          "size": 30839658,
-          "sha256": "27d2b5f18d0a222ac73d2e98fb33c85e148a2f0e944586eaccae24a021eed98f",
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -85,11 +85,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.43",
-      "versionDate": "2026-11-17T07:53:55Z",
-      "versionDescription": "新功能\n- 电脑列表与电脑详情新增连接器更新提醒：支持自我更新的连接器可在电脑详情一键「立即更新」，0.1.11 之前的老连接器提示一次性手动更新命令并支持拷贝。\n- 手机连接旧公共中转（`n0`）配对记录时同时尝试自建中转 `derp-hs.borry.org`，连接成功后自动在后台同步配对记录的中转地址与连接器版本信息，老用户升级后无需重新扫码。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.43/Tethera-0.43.ipa",
-      "size": 31164852
+      "version": "0.44",
+      "versionDate": "2026-11-17T09:37:26Z",
+      "versionDescription": "新功能\n- 开启 ProMotion 120Hz 高刷显示，列表里的循环小动画保持 30 帧以兼顾功耗与流畅度（#317）。\n- 连接方式改版为两类 + 线路：添加电脑与电脑详情先选「连接器（扫码配对）」或「SSH」，连接器类型下可勾选「Tethera 线路」「自定义线路」「SSH 兜底」，状态文字按实际走的路径显示，支持两类间切换并保留配对（#318）。\n- 设置 › 其他新增「诊断模式」：本地记录连接与路径变化、重连耗时、控制请求耗时、主线程卡顿与前台帧率，支持导出打码纯文本报告（在线 0.1.13 以上连接器自动附带末尾日志）与清空记录（#320）。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.44/Tethera-0.44.ipa",
+      "size": 31261820
     }
   ],
   "news": []
