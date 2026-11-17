@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.47",
+          "buildVersion": "923",
+          "date": "2026-11-17T13:23:06Z",
+          "localizedDescription": "修复\n- 电脑上有 Oh My Pi 会话在干活时,手机首页不再因为它标题里的转圈动画一直卡顿(#331)。列表里显示的标题也去掉了 Oh My Pi 的 π 前缀。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.47/Tethera-0.47.ipa",
+          "size": 31333075,
+          "sha256": "369b538c6bba8cec7fd55e8f6a75c9de9fbdb180fc41246bfe19e9884b39714f",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.46",
           "buildVersion": "917",
           "date": "2026-11-17T12:08:20Z",
@@ -61,16 +71,6 @@
           "size": 31164852,
           "sha256": "226ce1badd67e1b49e170fa87382e97024dcadb3e3d5dc8c2422fb331d301424",
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.42",
-          "buildVersion": "871",
-          "date": "2026-11-17T07:09:20Z",
-          "localizedDescription": "新功能\n- 主页新增「最近会话」分组（默认关闭，可在「设置 › 会话」中开启并设置显示条数 1–20，默认 5 条）：按最近点开时间列出各电脑各空间的会话，支持左滑或长按从最近会话移除，不搬走原分组中的会话（#299）。\n- ChatGPT 样式升级为整体风格：调整会话列表与对话页的字号、间距、气泡与面板排布（#303）。\n- 连接器默认中转地址由 iroh 公共节点（`n0`）改为自建节点 `https://derp-hs.borry.org/`（新装或未指定 relay 时生效；已有 `n0` 配置保持不变，可用 `tethera config set relay tethera` 切换）。",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.42/Tethera-0.42.ipa",
-          "size": 31122563,
-          "sha256": "4b28b46fdca2a54d8445b74fbfa2bd4b607bc7f1ba54273d38651cf7c99e1bf8",
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -85,11 +85,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.46",
-      "versionDate": "2026-11-17T12:08:20Z",
-      "versionDescription": "## 新功能\n- 手机扫码连上电脑时自动查一次连接器最新版；连接器支持空闲更新（0.1.14 起）且版本较旧时通知它在后台装好，等没有手机连着满 5 分钟再静默换上，电脑详情显示安静一行提示与「现在就换」（#327）。\n\n## 修复\n- 修复首页（会话列表）滑动时记录滚动锚点触发整页重算导致的掉帧卡顿（#326）。\n- 修复连上多 agent 电脑时终端无实质变化仍频繁重建整块看板导致帧率掉到个位数的问题，看板按终端列表去重并在 250 ms 内合并更新（#328）。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.46/Tethera-0.46.ipa",
-      "size": 31332504
+      "version": "0.47",
+      "versionDate": "2026-11-17T13:23:06Z",
+      "versionDescription": "修复\n- 电脑上有 Oh My Pi 会话在干活时,手机首页不再因为它标题里的转圈动画一直卡顿(#331)。列表里显示的标题也去掉了 Oh My Pi 的 π 前缀。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.47/Tethera-0.47.ipa",
+      "size": 31333075
     }
   ],
   "news": []
