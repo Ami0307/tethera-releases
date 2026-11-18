@@ -23,6 +23,16 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.48",
+          "buildVersion": "954",
+          "date": "2026-11-18T00:20:32Z",
+          "localizedDescription": "- 支持 Google Antigravity（agy）命令行会话的原生对话页，可在手机上查看对话记录与工具调用、发送消息、使用斜杠命令，新建终端时也可选 Antigravity（#305）。\n- 支持读取电脑上 Google Antigravity 的套餐配额与会话库 Token 用量，在首页气泡、「用量」页、「Token 用量」页及桌面小组件中展示并自动刷新（#306）。\n- 支持 Oh My Pi（omp）会话的原生对话页，兼容它的会话目录、记录格式和内置斜杠命令（#336）。\n\n- 统一灵动岛 / 锁屏实时活动与 App 首页的会话状态展示：做完还没点开的会话不再算「等你确认」，统一显示为绿色的「干完了」并置顶到首页「进行中」；点开实时活动直接回到首页顶部并展开对应分组（#307）。\n- 清理演示模式、单测样本及文档截图中的个人信息，统一替换为通用示例名称（#309）。",
+          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.48/Tethera-0.48.ipa",
+          "size": 31526479,
+          "sha256": "481093f8b2632a0c9e6a58214c2fa6a5b5bf7721296236381e61596f5012c11a",
+          "minOSVersion": "27.1"
+        },
+        {
           "version": "0.47",
           "buildVersion": "923",
           "date": "2026-11-17T13:23:06Z",
@@ -61,16 +71,6 @@
           "size": 31261820,
           "sha256": "8e6c209e4acbc70298c340f966976447c9012425fd863a364242250a152b7bcd",
           "minOSVersion": "27.1"
-        },
-        {
-          "version": "0.43",
-          "buildVersion": "877",
-          "date": "2026-11-17T07:53:55Z",
-          "localizedDescription": "新功能\n- 电脑列表与电脑详情新增连接器更新提醒：支持自我更新的连接器可在电脑详情一键「立即更新」，0.1.11 之前的老连接器提示一次性手动更新命令并支持拷贝。\n- 手机连接旧公共中转（`n0`）配对记录时同时尝试自建中转 `derp-hs.borry.org`，连接成功后自动在后台同步配对记录的中转地址与连接器版本信息，老用户升级后无需重新扫码。",
-          "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.43/Tethera-0.43.ipa",
-          "size": 31164852,
-          "sha256": "226ce1badd67e1b49e170fa87382e97024dcadb3e3d5dc8c2422fb331d301424",
-          "minOSVersion": "27.1"
         }
       ],
       "appPermissions": {
@@ -85,11 +85,11 @@
           "NSSpeechRecognitionUsageDescription": "把你说的话在手机上转成文字，填进对话输入框，发送前可以改。"
         }
       },
-      "version": "0.47",
-      "versionDate": "2026-11-17T13:23:06Z",
-      "versionDescription": "修复\n- 电脑上有 Oh My Pi 会话在干活时,手机首页不再因为它标题里的转圈动画一直卡顿(#331)。列表里显示的标题也去掉了 Oh My Pi 的 π 前缀。",
-      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.47/Tethera-0.47.ipa",
-      "size": 31333075
+      "version": "0.48",
+      "versionDate": "2026-11-18T00:20:32Z",
+      "versionDescription": "- 支持 Google Antigravity（agy）命令行会话的原生对话页，可在手机上查看对话记录与工具调用、发送消息、使用斜杠命令，新建终端时也可选 Antigravity（#305）。\n- 支持读取电脑上 Google Antigravity 的套餐配额与会话库 Token 用量，在首页气泡、「用量」页、「Token 用量」页及桌面小组件中展示并自动刷新（#306）。\n- 支持 Oh My Pi（omp）会话的原生对话页，兼容它的会话目录、记录格式和内置斜杠命令（#336）。\n\n- 统一灵动岛 / 锁屏实时活动与 App 首页的会话状态展示：做完还没点开的会话不再算「等你确认」，统一显示为绿色的「干完了」并置顶到首页「进行中」；点开实时活动直接回到首页顶部并展开对应分组（#307）。\n- 清理演示模式、单测样本及文档截图中的个人信息，统一替换为通用示例名称（#309）。",
+      "downloadURL": "https://github.com/Ami0307/tethera-releases/releases/download/app-v0.48/Tethera-0.48.ipa",
+      "size": 31526479
     }
   ],
   "news": []
