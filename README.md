@@ -26,8 +26,10 @@ curl -fsSL https://github.com/Ami0307/tethera-releases/releases/latest/download/
 | `tethera devices` | List paired phones |
 | `tethera revoke <name>` | Remove a phone; its connections end at once |
 | `tethera status` | Is it running, relay, direct addresses, phones |
-| `tethera config set relay n0\|off\|URL` | Choose the relay (default: n0 public relays) |
+| `tethera update` | Update to the latest release now (`--check` only checks) |
+| `tethera config set relay tethera\|n0\|off\|URL` | Choose the relay (default: `tethera`, Tethera's own relay; `n0` uses iroh's public relays) |
 | `tethera config set port N` | UDP port for direct connections (default 47011) |
+| `tethera config set auto-update off` | Stop the connector from updating itself (on by default; it only restarts when no phone is connected) |
 | `tethera uninstall` | Remove the agent, the binary and all connector state |
 
 ## Security
