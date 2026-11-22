@@ -2,7 +2,7 @@
   "name": "Tethera",
   "identifier": "app.tethera.source",
   "subtitle": "Herdr 的 iPhone 客户端",
-  "description": "Tethera 的 SideStore / AltStore 源。加一次地址，以后在 SideStore 里直接升级。",
+  "description": "Tethera 的 SideStore / AltStore 源，已停在 0.48，不再更新。新版本只通过 TestFlight 发布：https://testflight.apple.com/join/cGuNJnmf",
   "iconURL": "https://raw.githubusercontent.com/Ami0307/tethera-releases/main/sidestore/icon.png",
   "website": "https://github.com/Ami0307/tethera-releases",
   "tintColor": "#3E7A5C",
@@ -92,5 +92,16 @@
       "size": 31526479
     }
   ],
-  "news": []
+  "news": [
+    {
+      "title": "SideStore 停止更新，改用 TestFlight",
+      "identifier": "tethera-moved-to-testflight",
+      "caption": "Tethera 新版本只通过 TestFlight 发布，这个源停在 0.48。请用 TestFlight 公开链接安装，有问题也在 TestFlight 里反馈。",
+      "date": "2026-11-22",
+      "tintColor": "#3E7A5C",
+      "url": "https://testflight.apple.com/join/cGuNJnmf",
+      "appID": "app.tethera.Tethera",
+      "notify": true
+    }
+  ]
 }
