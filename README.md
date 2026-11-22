@@ -40,7 +40,7 @@ The macOS binary is not signed or notarized yet. A file downloaded with `curl` h
 
 ## iPhone app: TestFlight
 
-The Tethera iPhone app is distributed through TestFlight, by email invitation. To get one, send the email address of your Apple account to our Telegram bot; it emails you a TestFlight invite. (The bot's link will be added here once it is live.)
+The Tethera iPhone app is distributed through TestFlight, by email invitation. To get one, open [@tethera_feedback_bot](https://t.me/tethera_feedback_bot) on Telegram and send `/tf your-apple-id@example.com` in a private chat; Apple then emails you a TestFlight invite. `/tf_resend` resends it and `/tf_reset` removes you so you can apply with another address. Each Telegram account gets one application or resend per day and three per week (UTC+8, resets Monday).
 
 Accept the invite on your iPhone and install Tethera from the [TestFlight](https://apps.apple.com/app/testflight/id899247664) app. New builds then show up in TestFlight, which can update the app automatically.
 
