@@ -40,11 +40,9 @@ The macOS binary is not signed or notarized yet. A file downloaded with `curl` h
 
 ## iPhone app: TestFlight
 
-The Tethera iPhone app is distributed through TestFlight. Install the [TestFlight](https://apps.apple.com/app/testflight/id899247664) app, then open the public invite on your iPhone:
+The Tethera iPhone app is distributed through TestFlight, by email invitation. To get one, send the email address of your Apple account to our Telegram bot; it emails you a TestFlight invite. (The bot's link will be added here once it is live.)
 
-**https://testflight.apple.com/join/cGuNJnmf**
-
-New builds then show up in TestFlight, which can update the app automatically.
+Accept the invite on your iPhone and install Tethera from the [TestFlight](https://apps.apple.com/app/testflight/id899247664) app. New builds then show up in TestFlight, which can update the app automatically.
 
 ### Feedback
 
@@ -55,4 +53,4 @@ Send feedback from TestFlight; it reaches the developers together with the build
 
 ### SideStore (discontinued)
 
-The SideStore / AltStore source stopped at 0.48 and is no longer updated. If you installed Tethera that way, switch to TestFlight using the link above. `sidestore/source.json` and the old `app-v*` releases stay for now and will be removed later.
+The SideStore / AltStore source stopped at 0.48 and is no longer updated. If you installed Tethera that way, switch to TestFlight as described above. `sidestore/source.json` and the old `app-v*` releases stay for now and will be removed later.
