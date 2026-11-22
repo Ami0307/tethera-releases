@@ -38,12 +38,21 @@ curl -fsSL https://github.com/Ami0307/tethera-releases/releases/latest/download/
 
 The macOS binary is not signed or notarized yet. A file downloaded with `curl` has no quarantine flag, so macOS runs it without the Gatekeeper prompt.
 
-## iPhone app: SideStore source
+## iPhone app: TestFlight
 
-The Tethera iPhone app can be installed and updated from SideStore (or AltStore). Add this source once:
+The Tethera iPhone app is distributed through TestFlight. Install the [TestFlight](https://apps.apple.com/app/testflight/id899247664) app, then open the public invite on your iPhone:
 
-```
-https://raw.githubusercontent.com/Ami0307/tethera-releases/main/sidestore/source.json
-```
+**https://testflight.apple.com/join/cGuNJnmf**
 
-New versions then show up in SideStore and update in place. The IPAs are attached to the `app-v*` releases here (the newest 5 are kept); `sidestore/` only holds `source.json` and the app icon.
+New builds then show up in TestFlight, which can update the app automatically.
+
+### Feedback
+
+Send feedback from TestFlight; it reaches the developers together with the build number and device details:
+
+- Take a screenshot while using Tethera, tap the thumbnail, then tap **Share Beta Feedback**, add a note and send.
+- Or open Tethera in the TestFlight app and tap **Send Beta Feedback**. If the app crashed, TestFlight also offers to send a crash report with a comment.
+
+### SideStore (discontinued)
+
+The SideStore / AltStore source stopped at 0.48 and is no longer updated. If you installed Tethera that way, switch to TestFlight using the link above. `sidestore/source.json` and the old `app-v*` releases stay for now and will be removed later.
